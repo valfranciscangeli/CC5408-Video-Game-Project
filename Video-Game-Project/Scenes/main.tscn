@@ -7,7 +7,7 @@
 extents = Vector2( 207, 18 )
 
 [node name="Main" type="Node2D"]
-position = Vector2( 11, 69 )
+position = Vector2( 11, 68 )
 
 [node name="KinematicBody2D" parent="." instance=ExtResource( 1 )]
 position = Vector2( 13, 128 )
