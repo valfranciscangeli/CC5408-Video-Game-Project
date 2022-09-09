@@ -1,11 +1,68 @@
 [gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://assets/heroes/1 Pink_Monster/Pink_Monster_Idle_4.png" type="Texture" id=1]
+
 [ext_resource path="res://Scenes/Pink.gd" type="Script" id=2]
 [ext_resource path="res://assets/heroes/1 Pink_Monster/Pink_Monster_Run_6.png" type="Texture" id=3]
+[ext_resource path="res://scenes/Camera2D.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/night_parallax_background.tscn" type="PackedScene" id=4]
+
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 4.0
+height = 18.0
+
+[sub_resource type="Animation" id=2]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("PinkyIdle:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 3 ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "idle"
+length = 0.4
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("PinkyIdle:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 3, 3 ]
+}
+
+[sub_resource type="AnimationNodeAnimation" id=7]
+animation = "RESET"
+
+[sub_resource type="AnimationNodeAnimation" id=4]
+animation = "idle"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=8]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=9]
+
+[sub_resource type="AnimationNodeStateMachine" id=5]
+states/RESET/node = SubResource( 7 )
+states/RESET/position = Vector2( 435, 76.3333 )
+states/idle/node = SubResource( 4 )
+states/idle/position = Vector2( 237.667, 75 )
+transitions = [ "idle", "RESET", SubResource( 8 ), "RESET", "idle", SubResource( 9 ) ]
+start_node = "idle"
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=6]
 
 [sub_resource type="Animation" id=2]
 length = 0.001
@@ -152,11 +209,13 @@ start_node = "idle"
 [node name="Pinky" type="KinematicBody2D"]
 script = ExtResource( 2 )
 
+
 [node name="Pivot" type="Node2D" parent="."]
 
 [node name="PinkMonsterIdle4" type="Sprite" parent="Pivot"]
 texture = ExtResource( 1 )
 hframes = 6
+
 frame = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -164,6 +223,7 @@ visible = false
 shape = SubResource( 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
 method_call_mode = 1
 anims/RESET = SubResource( 2 )
 anims/idle = SubResource( 3 )
@@ -173,3 +233,10 @@ anims/run = SubResource( 4 )
 tree_root = SubResource( 9 )
 anim_player = NodePath("../AnimationPlayer")
 parameters/playback = SubResource( 10 )
+
+active = true
+
+[node name="Camara" parent="." instance=ExtResource( 3 )]
+
+[node name="ParallaxBackground" parent="Camara" instance=ExtResource( 4 )]
+
