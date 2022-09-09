@@ -7,3 +7,9 @@ export_presets.cfg
 # Mono-specific ignores
 .mono/
 data_*/
+
+
+# builds
+.exe
+*.exe
+Video-Game-Project/builds/prueba1.exe

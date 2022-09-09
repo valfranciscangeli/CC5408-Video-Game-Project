@@ -1,5 +1,7 @@
 extends KinematicBody2D
 
+
+# physics variables =======
 var velocity = Vector2()
 
 # Physics constans.
@@ -8,27 +10,23 @@ var SPEED = 200
 var JUMP_SPEED = 300
 var GRAVITY = 10
 
+# sprites ========
 onready var pivot = $Pivot
+onready var sprite = $Pivot/PinkMonsterIdle4
+onready var anim_player = $AnimationPlayer
 onready var anim_tree = $AnimationTree
 onready var playback = anim_tree.get("parameters/playback")
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	anim_tree.active = true # Replace with function body.
+	anim_tree.active = true
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
 
 func _physics_process(delta):
 	velocity = move_and_slide(velocity, Vector2.UP)
 	
 	var move_input = Input.get_axis("move_left", "move_right")
+	
 	
 	velocity.x = move_toward(velocity.x, move_input * SPEED, ACCELERATION)
 	
@@ -44,7 +42,7 @@ func _physics_process(delta):
 	if Input.is_action_pressed("move_left") and not Input.is_action_pressed("move_right"):
 		pivot.scale.x = -1
 		
-	if abs(velocity.x) > 10:
+	if abs(velocity.x) > 0:
 		playback.travel("run")
 	else:
 		playback.travel("idle")

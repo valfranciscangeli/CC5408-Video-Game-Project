@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Pink_Monster_Jump_8.png-5fbcfc825110fbb61924962371f6281a.stex"
+path="res://.import/Textures-16.png-01d84ba149201433e8cb26ce76a28496.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/heroes/1 Pink_Monster/Pink_Monster_Jump_8.png"
-dest_files=[ "res://.import/Pink_Monster_Jump_8.png-5fbcfc825110fbb61924962371f6281a.stex" ]
+source_file="res://assets/tiles/Textures-16.png"
+dest_files=[ "res://.import/Textures-16.png-01d84ba149201433e8cb26ce76a28496.stex" ]
 
 [params]
 
