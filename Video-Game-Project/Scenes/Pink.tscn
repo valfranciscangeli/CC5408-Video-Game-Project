@@ -176,5 +176,8 @@ anim_player = NodePath("../AnimationPlayer")
 parameters/playback = SubResource( 10 )
 
 [node name="Camara" parent="." instance=ExtResource( 3 )]
+limit_right = 1120
+limit_bottom = 380
 
 [node name="ParallaxBackground" parent="Camara" instance=ExtResource( 4 )]
+visible = false
