@@ -17,7 +17,7 @@
 [ext_resource path="res://scenes/Pink.tscn" type="PackedScene" id=15]
 [ext_resource path="res://assets/map1/1 Tiles/Tile_33.png" type="Texture" id=16]
 [ext_resource path="res://assets/map1/1 Tiles/Tile_54.png" type="Texture" id=17]
-[ext_resource path="res://Scenes/day_background.tscn" type="PackedScene" id=18]
+[ext_resource path="res://scenes/day_background.tscn" type="PackedScene" id=18]
 [ext_resource path="res://assets/map1/1 Tiles/Tile_47.png" type="Texture" id=19]
 [ext_resource path="res://assets/map1/1 Tiles/Tile_45.png" type="Texture" id=20]
 [ext_resource path="res://assets/map1/1 Tiles/Tile_48.png" type="Texture" id=21]
