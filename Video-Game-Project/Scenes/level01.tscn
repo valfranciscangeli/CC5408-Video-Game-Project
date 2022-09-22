@@ -1,4 +1,4 @@
-[gd_scene load_steps=173 format=2]
+[gd_scene load_steps=177 format=2]
 
 [ext_resource path="res://assets/map1/3 Objects/Other/Tree1.png" type="Texture" id=1]
 [ext_resource path="res://assets/tiles/Textures-16.png" type="Texture" id=2]
@@ -88,59 +88,6 @@
 [ext_resource path="res://assets/map1/1 Tiles/Tile_77.png" type="Texture" id=86]
 [ext_resource path="res://icon.png" type="Texture" id=87]
 [ext_resource path="res://scenes/block1.gd" type="Script" id=88]
-
-[sub_resource type="AtlasTexture" id=61]
-flags = 4
-atlas = ExtResource( 54 )
-region = Rect2( 0, 0, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=62]
-flags = 4
-atlas = ExtResource( 54 )
-region = Rect2( 32, 0, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=63]
-flags = 4
-atlas = ExtResource( 54 )
-region = Rect2( 64, 0, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=64]
-flags = 4
-atlas = ExtResource( 54 )
-region = Rect2( 96, 0, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=65]
-flags = 4
-atlas = ExtResource( 54 )
-region = Rect2( 128, 0, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=66]
-flags = 4
-atlas = ExtResource( 54 )
-region = Rect2( 160, 0, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=67]
-flags = 4
-atlas = ExtResource( 54 )
-region = Rect2( 192, 0, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=68]
-flags = 4
-atlas = ExtResource( 54 )
-region = Rect2( 224, 0, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=69]
-flags = 4
-atlas = ExtResource( 54 )
-region = Rect2( 256, 0, 32, 32 )
-
-[sub_resource type="SpriteFrames" id=57]
-animations = [ {
-"frames": [ SubResource( 61 ), SubResource( 62 ), SubResource( 63 ), SubResource( 64 ), SubResource( 65 ), SubResource( 66 ), SubResource( 67 ), SubResource( 68 ), SubResource( 69 ) ],
-"loop": true,
-"name": "default",
-"speed": 5.06
-} ]
 
 [sub_resource type="ConvexPolygonShape2D" id=2]
 points = PoolVector2Array( 16, 16, 0, 16, 0, 0, 16, 0 )
@@ -304,8 +251,20 @@ points = PoolVector2Array( 96, 144, 128, 144, 112, 160, 96, 144, 128, 144 )
 [sub_resource type="ConvexPolygonShape2D" id=20]
 points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
 
+[sub_resource type="ConvexPolygonShape2D" id=85]
+points = PoolVector2Array( 80, 0, 64, 16, 96, 16, 96, 64, 96, 32, 112, 16, 160, 16, 176, 32, 160, 48, 144, 64, 160, 64, 112, 112, 96, 96, 80, 112, 32, 64, 48, 48, 48, 32, 64, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=86]
+points = PoolVector2Array( 0, 96, 16, 96, 32, 96, 48, 96, 48, 112, 16, 112 )
+
+[sub_resource type="ConvexPolygonShape2D" id=87]
+points = PoolVector2Array( 96, 0, 112, 16, 144, 16, 160, 16, 192, 32, 176, 64, 160, 80, 144, 96, 64, 128, 32, 128, 16, 96, 48, 96, 48, 64, 64, 64, 64, 32, 64, 16, 80, 0 )
+
 [sub_resource type="ConvexPolygonShape2D" id=21]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=88]
+points = PoolVector2Array( 176, 32, 128, 112, 96, 112, 80, 112, 48, 128, 16, 128, 16, 96, 0, 96, 16, 80, 32, 80, 48, 64, 64, 48, 48, 32, 64, 16, 80, 0, 96, 16, 128, 16, 160, 16 )
 
 [sub_resource type="ConvexPolygonShape2D" id=22]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -1559,39 +1518,159 @@ points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
 57/shape_one_way_margin = 0.0
 57/shapes = [  ]
 57/z_index = 0
+58/name = "Tree4.png 58"
+58/texture = ExtResource( 66 )
+58/tex_offset = Vector2( 0, 0 )
+58/modulate = Color( 1, 1, 1, 1 )
+58/region = Rect2( 0, 0, 176, 192 )
+58/tile_mode = 0
+58/occluder_offset = Vector2( 0, 0 )
+58/navigation_offset = Vector2( 0, 0 )
+58/shape_offset = Vector2( 0, 0 )
+58/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+58/shape = SubResource( 85 )
+58/shape_one_way = false
+58/shape_one_way_margin = 1.0
+58/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 85 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 86 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+58/z_index = 0
+59/name = "Tree4.png 59"
+59/texture = ExtResource( 66 )
+59/tex_offset = Vector2( 0, 0 )
+59/modulate = Color( 1, 1, 1, 1 )
+59/region = Rect2( -16, 0, 192, 192 )
+59/tile_mode = 0
+59/occluder_offset = Vector2( 0, 0 )
+59/navigation_offset = Vector2( 0, 0 )
+59/shape_offset = Vector2( 0, 0 )
+59/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+59/shape = SubResource( 87 )
+59/shape_one_way = false
+59/shape_one_way_margin = 1.0
+59/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 87 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+59/z_index = 0
+60/name = "Tree4.png 60"
+60/texture = ExtResource( 66 )
+60/tex_offset = Vector2( 0, 0 )
+60/modulate = Color( 1, 1, 1, 1 )
+60/region = Rect2( 0, 0, 176, 192 )
+60/tile_mode = 0
+60/occluder_offset = Vector2( 0, 0 )
+60/navigation_offset = Vector2( 0, 0 )
+60/shape_offset = Vector2( 0, 0 )
+60/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+60/shape_one_way = false
+60/shape_one_way_margin = 0.0
+60/shapes = [  ]
+60/z_index = 0
+61/name = "Tree4.png 61"
+61/texture = ExtResource( 66 )
+61/tex_offset = Vector2( 0, 0 )
+61/modulate = Color( 1, 1, 1, 1 )
+61/region = Rect2( 0, 0, 176, 192 )
+61/tile_mode = 0
+61/occluder_offset = Vector2( 0, 0 )
+61/navigation_offset = Vector2( 0, 0 )
+61/shape_offset = Vector2( 0, 0 )
+61/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+61/shape = SubResource( 88 )
+61/shape_one_way = false
+61/shape_one_way_margin = 1.0
+61/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 88 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+61/z_index = 0
+
+[sub_resource type="AtlasTexture" id=61]
+atlas = ExtResource( 54 )
+region = Rect2( 0, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=62]
+atlas = ExtResource( 54 )
+region = Rect2( 32, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=63]
+atlas = ExtResource( 54 )
+region = Rect2( 64, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=64]
+atlas = ExtResource( 54 )
+region = Rect2( 96, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=65]
+atlas = ExtResource( 54 )
+region = Rect2( 128, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=66]
+atlas = ExtResource( 54 )
+region = Rect2( 160, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=67]
+atlas = ExtResource( 54 )
+region = Rect2( 192, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=68]
+atlas = ExtResource( 54 )
+region = Rect2( 224, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=69]
+atlas = ExtResource( 54 )
+region = Rect2( 256, 0, 32, 32 )
+
+[sub_resource type="SpriteFrames" id=57]
+animations = [ {
+"frames": [ SubResource( 61 ), SubResource( 62 ), SubResource( 63 ), SubResource( 64 ), SubResource( 65 ), SubResource( 66 ), SubResource( 67 ), SubResource( 68 ), SubResource( 69 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.06
+} ]
 
 [sub_resource type="AtlasTexture" id=75]
-flags = 4
 atlas = ExtResource( 80 )
 region = Rect2( 0, 0, 30, 22 )
 
 [sub_resource type="AtlasTexture" id=76]
-flags = 4
 atlas = ExtResource( 80 )
 region = Rect2( 32, 0, 30, 22 )
 
 [sub_resource type="AtlasTexture" id=77]
-flags = 4
 atlas = ExtResource( 80 )
 region = Rect2( 64, 0, 30, 22 )
 
 [sub_resource type="AtlasTexture" id=78]
-flags = 4
 atlas = ExtResource( 80 )
 region = Rect2( 96, 0, 30, 22 )
 
 [sub_resource type="AtlasTexture" id=79]
-flags = 4
 atlas = ExtResource( 80 )
 region = Rect2( 128, 0, 30, 22 )
 
 [sub_resource type="AtlasTexture" id=80]
-flags = 4
 atlas = ExtResource( 80 )
 region = Rect2( 160, 0, 30, 22 )
 
 [sub_resource type="AtlasTexture" id=81]
-flags = 4
 atlas = ExtResource( 80 )
 region = Rect2( 192, 0, 30, 22 )
 
@@ -1604,22 +1683,18 @@ animations = [ {
 } ]
 
 [sub_resource type="AtlasTexture" id=70]
-flags = 4
 atlas = ExtResource( 28 )
 region = Rect2( 0, 0, 72, 72 )
 
 [sub_resource type="AtlasTexture" id=71]
-flags = 4
 atlas = ExtResource( 28 )
 region = Rect2( 72, 0, 72, 72 )
 
 [sub_resource type="AtlasTexture" id=72]
-flags = 4
 atlas = ExtResource( 28 )
 region = Rect2( 144, 0, 72, 72 )
 
 [sub_resource type="AtlasTexture" id=73]
-flags = 4
 atlas = ExtResource( 28 )
 region = Rect2( 216, 0, 72, 72 )
 
@@ -1639,16 +1714,6 @@ extents = Vector2( 8, 8 )
 
 [node name="Level02" type="Node2D"]
 
-[node name="skate" type="AnimatedSprite" parent="."]
-position = Vector2( 949, 279 )
-scale = Vector2( 1, 1.2 )
-z_index = 7
-z_as_relative = false
-frames = SubResource( 57 )
-frame = 2
-speed_scale = 0.5
-playing = true
-
 [node name="DayBackground2" parent="." instance=ExtResource( 18 )]
 position = Vector2( 573, 30 )
 scale = Vector2( 1, 1.2 )
@@ -1662,10 +1727,11 @@ z_index = 1
 tile_set = SubResource( 1 )
 cell_size = Vector2( 16, 16 )
 cell_y_sort = true
+show_collision = true
 collision_layer = 3
 collision_mask = 3
 format = 1
-tile_data = PoolIntArray( 65534, -1610612726, 0, 131070, -1610612726, 0, 196606, -1610612726, 0, 262142, -1610612726, 0, 196610, 536870936, 0, 196678, 2, 0, 327678, -1610612726, 0, 262214, 2, 0, 393214, -1610612726, 0, 327750, 2, 0, 458750, -1610612726, 0, 393286, 2, 0, 458780, 46, 0, 458822, 2, 0, 589822, -1610612726, 0, 524311, 536870930, 0, 524313, 536870928, 0, 524333, 536870930, 0, 524335, 536870928, 0, 524358, 2, 0, 655358, -1610612726, 0, 589894, 2, 0, 720894, -1610612726, 0, 655413, 50, 0, 655415, 52, 0, 655430, 2, 0, 786430, -1610612726, 0, 720938, 536870957, 0, 720966, 2, 0, 851966, -1610612726, 0, 786436, 15, 0, 786444, 536870935, 0, 786446, 536870934, 0, 786448, 23, 0, 786484, 536870935, 0, 786486, 536870934, 0, 786488, 23, 0, 786494, 536870927, 0, 786502, 2, 0, 917502, -1610612726, 0, 852038, 2, 0, 983038, -1610612726, 0, 917574, 2, 0, 1048574, -1610612726, 0, 983110, 2, 0, 1114110, -1610612726, 0, 1048646, 2, 0, 1179646, -1610612726, 0, 1114182, 2, 0, 1245182, -1610612726, 0, 1179653, 536870943, 0, 1179655, 536870942, 0, 1179657, 536870942, 0, 1179659, 536870942, 0, 1179661, 536870944, 0, 1179704, 536870943, 0, 1179706, 536870942, 0, 1179708, 536870942, 0, 1179710, 536870942, 0, 1179712, 536870944, 0, 1179718, 2, 0, 1245210, 536870943, 0, 1245211, 2, 0, 1245212, 536870942, 0, 1245213, 536870942, 0, 1245214, 536870942, 0, 1245215, 536870942, 0, 1245216, 536870942, 0, 1245217, 536870942, 0, 1245218, 536870942, 0, 1245219, 536870942, 0, 1245220, 536870942, 0, 1245221, 536870942, 0, 1245222, 536870942, 0, 1245223, 536870942, 0, 1245224, 536870942, 0, 1245225, 536870942, 0, 1245226, 536870942, 0, 1245227, 536870942, 0, 1245228, 536870942, 0, 1245229, 2, 0, 1245230, 536870944, 0, 1245254, 2, 0, 1310725, 536870940, 0, 1310726, 536870939, 0, 1310727, 536870939, 0, 1310729, 1073741864, 0, 1310731, 536870938, 0, 1310733, 536870937, 0, 1310770, 50, 0, 1310772, 536870963, 0, 1310774, 536870962, 0, 1310776, 536870940, 0, 1310778, 26, 0, 1310780, 27, 0, 1310782, -1610612696, 0, 1310784, 28, 0, 1310790, 2, 0, 1376263, 536870939, 0, 1376282, 536870949, 0, 1376284, 1073741863, 0, 1376286, 536870952, 0, 1376288, 536870952, 0, 1376290, 536870953, 0, 1376291, 536870954, 0, 1376292, 536870953, 0, 1376294, 536870953, 0, 1376296, 536870954, 0, 1376298, 536870955, 0, 1376300, 1073741862, 0, 1376302, 37, 0, 1376318, 27, 0, 1376326, 2, 0, 1441797, 536870949, 0, 1441799, 536870948, 0, 1441801, 536870948, 0, 1441803, 536870948, 0, 1441805, 37, 0, 1441840, 536870964, 0, 1441842, 53, 0, 1441844, 54, 0, 1441845, 536870961, 0, 1441846, 536870960, 0, 1441848, 536870949, 0, 1441850, 536870948, 0, 1441852, 536870948, 0, 1441854, 536870948, 0, 1441856, 37, 0, 1441862, 2, 0, 1507356, 536870949, 0, 1507358, 36, 0, 1507360, 536870948, 0, 1507362, 36, 0, 1507364, 536870948, 0, 1507366, 36, 0, 1507368, 536870948, 0, 1507370, 36, 0, 1507372, 37, 0, 1507374, 536870964, 0, 1507398, 2, 0, 1572912, 47, 0, 1572914, 47, 0, 1572916, 47, 0, 1572918, 47, 0 )
+tile_data = PoolIntArray( 65534, -1610612726, 0, 131070, -1610612726, 0, 196606, -1610612726, 0, 262142, -1610612726, 0, 196610, 536870936, 0, 196678, 2, 0, 327678, -1610612726, 0, 262214, 2, 0, 393214, -1610612726, 0, 327750, 2, 0, 458750, -1610612726, 0, 393286, 2, 0, 458779, 61, 0, 458822, 2, 0, 589822, -1610612726, 0, 524311, 536870930, 0, 524313, 18, 0, 524333, 536870930, 0, 524335, 536870928, 0, 524358, 2, 0, 655358, -1610612726, 0, 589894, 2, 0, 720894, -1610612726, 0, 655413, 50, 0, 655415, 52, 0, 655430, 2, 0, 786430, -1610612726, 0, 720938, 536870957, 0, 720966, 2, 0, 851966, -1610612726, 0, 786436, 15, 0, 786444, 536870935, 0, 786446, 536870934, 0, 786448, 23, 0, 786484, 536870935, 0, 786486, 536870934, 0, 786488, 23, 0, 786494, 536870927, 0, 786502, 2, 0, 917502, -1610612726, 0, 852038, 2, 0, 983038, -1610612726, 0, 917574, 2, 0, 1048574, -1610612726, 0, 983110, 2, 0, 1114110, -1610612726, 0, 1048646, 2, 0, 1179646, -1610612726, 0, 1114182, 2, 0, 1245182, -1610612726, 0, 1179653, 536870943, 0, 1179655, 536870942, 0, 1179657, 536870942, 0, 1179659, 536870942, 0, 1179661, 536870944, 0, 1179704, 536870943, 0, 1179706, 536870942, 0, 1179708, 536870942, 0, 1179710, 536870942, 0, 1179712, 536870944, 0, 1179718, 2, 0, 1245210, 536870943, 0, 1245211, 2, 0, 1245212, 536870942, 0, 1245213, 536870942, 0, 1245214, 536870942, 0, 1245215, 536870942, 0, 1245216, 536870942, 0, 1245217, 536870942, 0, 1245218, 536870942, 0, 1245219, 536870942, 0, 1245220, 536870942, 0, 1245221, 536870942, 0, 1245222, 536870942, 0, 1245223, 536870942, 0, 1245224, 536870942, 0, 1245225, 536870942, 0, 1245226, 536870942, 0, 1245227, 536870942, 0, 1245228, 536870942, 0, 1245229, 2, 0, 1245230, 536870944, 0, 1245254, 2, 0, 1310725, 536870940, 0, 1310726, 536870939, 0, 1310727, 536870939, 0, 1310729, 1073741864, 0, 1310731, 536870938, 0, 1310733, 536870937, 0, 1310770, 50, 0, 1310772, 536870963, 0, 1310774, 536870962, 0, 1310776, 536870940, 0, 1310778, 26, 0, 1310780, 27, 0, 1310782, -1610612696, 0, 1310784, 28, 0, 1310790, 2, 0, 1376263, 536870939, 0, 1376282, 536870949, 0, 1376284, 1073741863, 0, 1376286, 536870952, 0, 1376288, 536870952, 0, 1376290, 536870953, 0, 1376291, 536870954, 0, 1376292, 536870953, 0, 1376294, 536870953, 0, 1376296, 536870954, 0, 1376298, 536870955, 0, 1376300, 1073741862, 0, 1376302, 37, 0, 1376318, 27, 0, 1376326, 2, 0, 1441797, 536870949, 0, 1441799, 536870948, 0, 1441801, 536870948, 0, 1441803, 536870948, 0, 1441805, 37, 0, 1441840, 536870964, 0, 1441842, 53, 0, 1441844, 54, 0, 1441845, 536870961, 0, 1441846, 536870960, 0, 1441848, 536870949, 0, 1441850, 536870948, 0, 1441852, 536870948, 0, 1441854, 536870948, 0, 1441856, 37, 0, 1441862, 2, 0, 1507356, 536870949, 0, 1507358, 36, 0, 1507360, 536870948, 0, 1507362, 36, 0, 1507364, 536870948, 0, 1507366, 36, 0, 1507368, 536870948, 0, 1507370, 36, 0, 1507372, 37, 0, 1507374, 536870964, 0, 1507398, 2, 0, 1572912, 47, 0, 1572914, 47, 0, 1572916, 47, 0, 1572918, 47, 0 )
 
 [node name="Decoración" type="Node2D" parent="."]
 
@@ -1823,8 +1889,18 @@ position = Vector2( 526, 297 )
 z_index = 10
 texture = ExtResource( 76 )
 
+[node name="skate" type="AnimatedSprite" parent="Decoración"]
+position = Vector2( 949, 279 )
+scale = Vector2( 1, 1.2 )
+z_index = 7
+z_as_relative = false
+frames = SubResource( 57 )
+frame = 1
+speed_scale = 0.5
+playing = true
+
 [node name="Pinky" parent="." instance=ExtResource( 15 )]
-position = Vector2( 239, 94 )
+position = Vector2( 235, 107 )
 
 [node name="cofre" type="AnimatedSprite" parent="."]
 position = Vector2( 902, 181 )
