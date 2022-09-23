@@ -160,6 +160,9 @@ script = ExtResource( 2 )
 texture = ExtResource( 1 )
 hframes = 4
 
+[node name="Item" type="Position2D" parent="Pivot"]
+position = Vector2( 4, 7 )
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, 1 )
 shape = SubResource( 1 )
@@ -176,6 +179,7 @@ anim_player = NodePath("../AnimationPlayer")
 parameters/playback = SubResource( 10 )
 
 [node name="Camara" parent="." instance=ExtResource( 3 )]
+visible = false
 limit_right = 1120
 limit_bottom = 380
 
