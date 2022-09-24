@@ -1895,7 +1895,7 @@ scale = Vector2( 1, 1.2 )
 z_index = 7
 z_as_relative = false
 frames = SubResource( 57 )
-frame = 2
+frame = 1
 speed_scale = 0.5
 playing = true
 
@@ -1915,7 +1915,7 @@ position = Vector2( 609, 262 )
 scale = Vector2( 1, 1.2 )
 z_index = 12
 frames = SubResource( 74 )
-frame = 3
+frame = 2
 playing = true
 
 [node name="block1" type="RigidBody2D" parent="."]
