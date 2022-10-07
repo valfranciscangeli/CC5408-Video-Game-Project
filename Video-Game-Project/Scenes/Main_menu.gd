@@ -1,17 +1,19 @@
 extends MarginContainer
-onready var playmap1 = $VBoxContainer/Playmap1
-onready var playmap2 = $VBoxContainer/Playmap2
+onready var play = $VBoxContainer/Play
+onready var credits = $VBoxContainer/Credits
 onready var exit = $VBoxContainer/Exit
 
 
 
 func _ready():
 	exit.connect("pressed",self,"_on_exit_pressed")
-	playmap1.connect("pressed",self,"_on_playmap1_pressed")
+	play.connect("pressed",self,"_on_play_pressed")
+	credits.connect("pressed",self,"_on_credits_pressed")
 	
 func _on_exit_pressed():
 	get_tree().quit()
-func _on_playmap1_pressed():
+func _on_play_pressed():
 	get_tree().change_scene("res://Scenes/level01.tscn")
 	
-
+func _on_credits_pressed():
+	get_tree().change_scene("res://Scenes/credits.tscn")

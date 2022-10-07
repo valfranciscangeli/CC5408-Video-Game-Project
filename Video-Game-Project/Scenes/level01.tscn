@@ -1897,7 +1897,7 @@ scale = Vector2( 1, 1.2 )
 z_index = 7
 z_as_relative = false
 frames = SubResource( 57 )
-frame = 1
+frame = 3
 speed_scale = 0.5
 playing = true
 
@@ -1906,7 +1906,7 @@ position = Vector2( 902, 181 )
 scale = Vector2( 1, 1.2 )
 z_index = 1
 frames = SubResource( 82 )
-frame = 3
+frame = 5
 playing = true
 
 [node name="fountain" type="AnimatedSprite" parent="Decoración"]
@@ -1914,7 +1914,6 @@ position = Vector2( 609, 262 )
 scale = Vector2( 1, 1.2 )
 z_index = 12
 frames = SubResource( 74 )
-frame = 1
 playing = true
 
 [node name="block1" type="RigidBody2D" parent="."]
@@ -1940,10 +1939,10 @@ shape = SubResource( 84 )
 [node name="FollowerCamera" parent="." instance=ExtResource( 89 )]
 
 [node name="Pinky" parent="FollowerCamera" instance=ExtResource( 15 )]
-position = Vector2( 261, 13 )
+position = Vector2( 485, 271 )
 
 [node name="Pinky2" parent="FollowerCamera" instance=ExtResource( 90 )]
-position = Vector2( 949, 120 )
+position = Vector2( 663, 253 )
 
 [node name="Pinky3" parent="FollowerCamera" instance=ExtResource( 90 )]
 position = Vector2( 576, 258 )

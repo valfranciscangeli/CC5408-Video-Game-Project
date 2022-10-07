@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://resources/NicoFontPack-v1.0/Base Font Files/NicoBold/NicoBold-Monospaced.woff2" type="DynamicFontData" id=1]
 [ext_resource path="res://Scenes/Main_menu.gd" type="Script" id=2]
@@ -10,21 +10,23 @@ outline_size = 4
 outline_color = Color( 0.0352941, 0, 0, 1 )
 font_data = ExtResource( 1 )
 
+[sub_resource type="StyleBoxEmpty" id=2]
+
 [node name="Main_menu" type="MarginContainer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -1.0
-margin_top = 2.0
-margin_right = -1.0
-margin_bottom = 2.0
 theme = ExtResource( 3 )
 script = ExtResource( 2 )
+__meta__ = {
+"_edit_horizontal_guides_": [ -20.0 ]
+}
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 margin_left = 25.0
-margin_top = 25.0
+margin_top = 42.0
 margin_right = 415.0
-margin_bottom = 275.0
+margin_bottom = 257.0
+size_flags_vertical = 4
 
 [node name="Label" type="Label" parent="VBoxContainer"]
 margin_right = 390.0
@@ -33,20 +35,27 @@ custom_fonts/font = SubResource( 1 )
 text = "Juegosinnombre "
 align = 1
 
-[node name="Playmap1" type="Button" parent="VBoxContainer"]
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer"]
 margin_top = 39.0
 margin_right = 390.0
-margin_bottom = 77.0
-text = "Play map 1"
+margin_bottom = 89.0
+custom_constants/separation = 50
+custom_styles/separator = SubResource( 2 )
 
-[node name="Playmap2" type="Button" parent="VBoxContainer"]
-margin_top = 81.0
+[node name="Play" type="Button" parent="VBoxContainer"]
+margin_top = 93.0
 margin_right = 390.0
-margin_bottom = 119.0
-text = "Play map 2"
+margin_bottom = 131.0
+text = "Play "
+
+[node name="Credits" type="Button" parent="VBoxContainer"]
+margin_top = 135.0
+margin_right = 390.0
+margin_bottom = 173.0
+text = "credits"
 
 [node name="Exit" type="Button" parent="VBoxContainer"]
-margin_top = 123.0
+margin_top = 177.0
 margin_right = 390.0
-margin_bottom = 161.0
+margin_bottom = 215.0
 text = "Exit"
