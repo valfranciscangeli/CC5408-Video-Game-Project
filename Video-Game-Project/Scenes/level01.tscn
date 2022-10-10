@@ -88,9 +88,9 @@
 [ext_resource path="res://assets/map1/1 Tiles/Tile_77.png" type="Texture" id=86]
 [ext_resource path="res://icon.png" type="Texture" id=87]
 [ext_resource path="res://scenes/block1.gd" type="Script" id=88]
-[ext_resource path="res://Scenes/follower_camera.tscn" type="PackedScene" id=89]
-[ext_resource path="res://Scenes/Pink.tscn" type="PackedScene" id=90]
-[ext_resource path="res://Scenes/Pink2.gd" type="Script" id=91]
+[ext_resource path="res://scenes/follower_camera.tscn" type="PackedScene" id=89]
+[ext_resource path="res://scenes/Pink.tscn" type="PackedScene" id=90]
+[ext_resource path="res://scenes/Pink2.gd" type="Script" id=91]
 
 [sub_resource type="ConvexPolygonShape2D" id=2]
 points = PoolVector2Array( 16, 16, 0, 16, 0, 0, 16, 0 )
