@@ -27,7 +27,7 @@ func _ready():
 	anim_tree.active = true
 
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	velocity = move_and_slide(velocity, Vector2.UP)
 	
 	var move_input = Input.get_axis(move_left_action, move_right_action)
