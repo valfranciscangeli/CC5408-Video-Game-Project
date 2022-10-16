@@ -16,7 +16,7 @@ var GRAVITY = 10
 
 # sprites ========
 onready var pivot = $Pivot
-onready var sprite = $Pivot/PinkMonsterIdle4
+onready var sprite = $Pivot/Sprite
 onready var item = $Pivot/Item
 onready var anim_player = $AnimationPlayer
 onready var anim_tree = $AnimationTree
@@ -49,8 +49,13 @@ func _physics_process(_delta):
 		pivot.scale.x = -1
 		item.scale.x = -1
 		
-	if abs(velocity.x) > 0:
+	if abs(velocity.x) > 0 and is_on_floor():
 		playback.travel("run")
-	else:
+	elif abs(velocity.x) == 0 and is_on_floor():
 		playback.travel("idle")
+	elif velocity.y < 0:
+		playback.travel("Jump_up")
+	else:
+		playback.travel("jump_down")
+		
 	

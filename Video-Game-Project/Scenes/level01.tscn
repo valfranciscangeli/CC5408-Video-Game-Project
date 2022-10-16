@@ -14,7 +14,7 @@
 [ext_resource path="res://assets/map1/1 Tiles/Tile_07.png" type="Texture" id=12]
 [ext_resource path="res://assets/map1/1 Tiles/Tile_08.png" type="Texture" id=13]
 [ext_resource path="res://assets/map1/1 Tiles/Tile_10.png" type="Texture" id=14]
-[ext_resource path="res://scenes/Pink.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Scenes/Wooly.tscn" type="PackedScene" id=15]
 [ext_resource path="res://assets/map1/1 Tiles/Tile_33.png" type="Texture" id=16]
 [ext_resource path="res://assets/map1/1 Tiles/Tile_54.png" type="Texture" id=17]
 [ext_resource path="res://scenes/day_background.tscn" type="PackedScene" id=18]
@@ -90,7 +90,7 @@
 [ext_resource path="res://scenes/block1.gd" type="Script" id=88]
 [ext_resource path="res://scenes/follower_camera.tscn" type="PackedScene" id=89]
 [ext_resource path="res://scenes/Pink.tscn" type="PackedScene" id=90]
-[ext_resource path="res://scenes/Pink2.gd" type="Script" id=91]
+[ext_resource path="res://Scenes/Pink2.gd" type="Script" id=91]
 
 [sub_resource type="ConvexPolygonShape2D" id=2]
 points = PoolVector2Array( 16, 16, 0, 16, 0, 0, 16, 0 )
@@ -1620,38 +1620,47 @@ points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
 62/z_index = 0
 
 [sub_resource type="AtlasTexture" id=61]
+flags = 4
 atlas = ExtResource( 54 )
 region = Rect2( 0, 0, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=62]
+flags = 4
 atlas = ExtResource( 54 )
 region = Rect2( 32, 0, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=63]
+flags = 4
 atlas = ExtResource( 54 )
 region = Rect2( 64, 0, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=64]
+flags = 4
 atlas = ExtResource( 54 )
 region = Rect2( 96, 0, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=65]
+flags = 4
 atlas = ExtResource( 54 )
 region = Rect2( 128, 0, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=66]
+flags = 4
 atlas = ExtResource( 54 )
 region = Rect2( 160, 0, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=67]
+flags = 4
 atlas = ExtResource( 54 )
 region = Rect2( 192, 0, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=68]
+flags = 4
 atlas = ExtResource( 54 )
 region = Rect2( 224, 0, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=69]
+flags = 4
 atlas = ExtResource( 54 )
 region = Rect2( 256, 0, 32, 32 )
 
@@ -1664,30 +1673,37 @@ animations = [ {
 } ]
 
 [sub_resource type="AtlasTexture" id=75]
+flags = 4
 atlas = ExtResource( 80 )
 region = Rect2( 0, 0, 30, 22 )
 
 [sub_resource type="AtlasTexture" id=76]
+flags = 4
 atlas = ExtResource( 80 )
 region = Rect2( 32, 0, 30, 22 )
 
 [sub_resource type="AtlasTexture" id=77]
+flags = 4
 atlas = ExtResource( 80 )
 region = Rect2( 64, 0, 30, 22 )
 
 [sub_resource type="AtlasTexture" id=78]
+flags = 4
 atlas = ExtResource( 80 )
 region = Rect2( 96, 0, 30, 22 )
 
 [sub_resource type="AtlasTexture" id=79]
+flags = 4
 atlas = ExtResource( 80 )
 region = Rect2( 128, 0, 30, 22 )
 
 [sub_resource type="AtlasTexture" id=80]
+flags = 4
 atlas = ExtResource( 80 )
 region = Rect2( 160, 0, 30, 22 )
 
 [sub_resource type="AtlasTexture" id=81]
+flags = 4
 atlas = ExtResource( 80 )
 region = Rect2( 192, 0, 30, 22 )
 
@@ -1700,18 +1716,22 @@ animations = [ {
 } ]
 
 [sub_resource type="AtlasTexture" id=70]
+flags = 4
 atlas = ExtResource( 28 )
 region = Rect2( 0, 0, 72, 72 )
 
 [sub_resource type="AtlasTexture" id=71]
+flags = 4
 atlas = ExtResource( 28 )
 region = Rect2( 72, 0, 72, 72 )
 
 [sub_resource type="AtlasTexture" id=72]
+flags = 4
 atlas = ExtResource( 28 )
 region = Rect2( 144, 0, 72, 72 )
 
 [sub_resource type="AtlasTexture" id=73]
+flags = 4
 atlas = ExtResource( 28 )
 region = Rect2( 216, 0, 72, 72 )
 
@@ -1921,7 +1941,7 @@ position = Vector2( 902, 181 )
 scale = Vector2( 1, 1.2 )
 z_index = 1
 frames = SubResource( 82 )
-frame = 2
+frame = 6
 playing = true
 
 [node name="fountain" type="AnimatedSprite" parent="Decoración"]
@@ -1954,9 +1974,9 @@ shape = SubResource( 84 )
 
 [node name="FollowerCamera" parent="." instance=ExtResource( 89 )]
 
-[node name="Pinky" parent="FollowerCamera" instance=ExtResource( 15 )]
+[node name="Pinky" parent="FollowerCamera" instance=ExtResource( 90 )]
 position = Vector2( 239, 167 )
 
-[node name="Pinky2" parent="FollowerCamera" instance=ExtResource( 90 )]
-position = Vector2( 663, 253 )
+[node name="Wooly" parent="FollowerCamera" instance=ExtResource( 15 )]
+position = Vector2( 666, 249 )
 script = ExtResource( 91 )
