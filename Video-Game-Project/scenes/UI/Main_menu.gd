@@ -14,7 +14,11 @@ func _on_exit_pressed():
 	get_tree().quit()
 	
 func _on_play_pressed():
-	get_tree().change_scene("res://scenes/Levels/level01.tscn")
+	if get_tree().change_scene("res://scenes/Levels/level01.tscn") != OK:
+		print ("An unexpected error occured when trying to switch to the Level01 scene")
+	
 	
 func _on_credits_pressed():
-	get_tree().change_scene("res://scenes/UI/credits.tscn")
+	if get_tree().change_scene("res://scenes/UI/credits.tscn") != OK:
+		print ("An unexpected error occured when trying to switch to the Credits scene")
+	
