@@ -1,6 +1,18 @@
-[gd_resource type="Theme" load_steps=3 format=2]
+[gd_resource type="Theme" load_steps=6 format=2]
 
 [ext_resource path="res://resources/NicoFontPack-v1.0/Base Font Files/NicoPaint/NicoPaint-Monospaced.woff2" type="DynamicFontData" id=1]
+
+[sub_resource type="StyleBoxLine" id=2]
+color = Color( 1, 1, 1, 1 )
+
+[sub_resource type="StyleBoxTexture" id=4]
+
+[sub_resource type="StyleBoxLine" id=3]
+content_margin_left = 32.0
+content_margin_right = 32.0
+color = Color( 1, 1, 1, 1 )
+grow_begin = -45.0
+grow_end = -45.0
 
 [sub_resource type="DynamicFont" id=1]
 size = 32
@@ -10,10 +22,23 @@ font_data = ExtResource( 1 )
 
 [resource]
 default_font = SubResource( 1 )
-Button/colors/font_color = Color( 0.419608, 0.172549, 0.611765, 1 )
+Button/colors/font_color = Color( 0.333333, 0.333333, 0.6, 1 )
 Button/colors/font_color_focus = Color( 0.541176, 0.0823529, 0.0823529, 1 )
-Label/colors/font_color = Color( 0.0392157, 0.513726, 0.0862745, 1 )
+HSeparator/constants/separation = 20
+HSeparator/styles/separator = SubResource( 2 )
+Label/colors/font_color = Color( 0.156863, 0.701961, 0.490196, 1 )
+Label2/base_type = "Label"
+Label2/colors/font_color = Color( 1, 1, 1, 1 )
+Label2/colors/font_color_shadow = Color( 0, 0, 0, 1 )
+Label2/colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+Label2/styles/normal = SubResource( 4 )
 MarginContainer/constants/margin_bottom = 25
 MarginContainer/constants/margin_left = 25
 MarginContainer/constants/margin_right = 25
 MarginContainer/constants/margin_top = 25
+SmallHSeparator/base_type = "HSeparator"
+SmallHSeparator/constants/separation = 20
+SmallHSeparator/styles/separator = SubResource( 3 )
+label3/base_type = "Label"
+label3/colors/font_color = Color( 0.333333, 0.333333, 0.6, 1 )
+label3/colors/font_color_shadow = Color( 0, 0, 0, 1 )
