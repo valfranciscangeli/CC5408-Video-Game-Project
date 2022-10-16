@@ -14,7 +14,7 @@
 [ext_resource path="res://assets/map1/1 Tiles/Tile_07.png" type="Texture" id=12]
 [ext_resource path="res://assets/map1/1 Tiles/Tile_08.png" type="Texture" id=13]
 [ext_resource path="res://assets/map1/1 Tiles/Tile_10.png" type="Texture" id=14]
-[ext_resource path="res://scenes/Wooly.tscn" type="PackedScene" id=15]
+[ext_resource path="res://scenes/Heroes/Wooly.tscn" type="PackedScene" id=15]
 [ext_resource path="res://assets/map1/1 Tiles/Tile_33.png" type="Texture" id=16]
 [ext_resource path="res://assets/map1/1 Tiles/Tile_54.png" type="Texture" id=17]
 [ext_resource path="res://scenes/day_background.tscn" type="PackedScene" id=18]
@@ -87,12 +87,12 @@
 [ext_resource path="res://assets/map1/1 Tiles/Tile_82.png" type="Texture" id=85]
 [ext_resource path="res://assets/map1/1 Tiles/Tile_77.png" type="Texture" id=86]
 [ext_resource path="res://icon.png" type="Texture" id=87]
-[ext_resource path="res://scenes/block1.gd" type="Script" id=88]
-[ext_resource path="res://scenes/follower_camera.tscn" type="PackedScene" id=89]
-[ext_resource path="res://scenes/Pink.tscn" type="PackedScene" id=90]
-[ext_resource path="res://scenes/Wooly.gd" type="Script" id=91]
-[ext_resource path="res://scenes/Bluey.gd" type="Script" id=92]
-[ext_resource path="res://scenes/Bluey.tscn" type="PackedScene" id=93]
+[ext_resource path="res://scenes/Items/block1.gd" type="Script" id=88]
+[ext_resource path="res://scenes/Cameras/follower_camera.tscn" type="PackedScene" id=89]
+[ext_resource path="res://scenes/Heroes/Pink.tscn" type="PackedScene" id=90]
+[ext_resource path="res://scenes/Heroes/Wooly.gd" type="Script" id=91]
+[ext_resource path="res://scenes/Heroes/Bluey.gd" type="Script" id=92]
+[ext_resource path="res://scenes/Heroes/Bluey.tscn" type="PackedScene" id=93]
 
 [sub_resource type="ConvexPolygonShape2D" id=2]
 points = PoolVector2Array( 16, 16, 0, 16, 0, 0, 16, 0 )
@@ -1913,7 +1913,7 @@ scale = Vector2( 1, 1.2 )
 z_index = 7
 z_as_relative = false
 frames = SubResource( 57 )
-frame = 1
+frame = 8
 speed_scale = 0.5
 playing = true
 
@@ -1922,6 +1922,7 @@ position = Vector2( 902, 181 )
 scale = Vector2( 1, 1.2 )
 z_index = 1
 frames = SubResource( 82 )
+frame = 6
 playing = true
 
 [node name="fountain" type="AnimatedSprite" parent="Decoración"]
@@ -1929,7 +1930,7 @@ position = Vector2( 609, 262 )
 scale = Vector2( 1, 1.2 )
 z_index = 12
 frames = SubResource( 74 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="block1" type="RigidBody2D" parent="."]
