@@ -67,7 +67,7 @@ func _ready():
 		
 
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	var last_scroll = scroll_container.scroll_vertical
 	scroll_container.scroll_vertical += scroll_speed
 	var new_scroll = scroll_container.scroll_vertical
@@ -105,5 +105,8 @@ func _to_main_menu():
 	if not scroll_ended:
 		scroll_ended = true
 		yield(get_tree().create_timer(2), "timeout")
-		get_tree().change_scene("res://scenes/UI/Main_menu.tscn")
+		if get_tree().change_scene("res://scenes/UI/Main_menu.tscn") != OK:
+			print ("An unexpected error occured when trying to switch to the Main Menu scene")
+
+
 
