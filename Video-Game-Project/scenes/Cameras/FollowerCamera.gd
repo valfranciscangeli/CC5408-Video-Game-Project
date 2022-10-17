@@ -7,17 +7,38 @@ var camera_rect : = Rect2()
 var viewport_rect : = Rect2()
 
 
+onready var sup_izq = ($"../Limites/PositionIzqUp").global_position
+#onready var sup_der = ($"../Limites/PositionDerUp").global_position
+#onready var inf_izq = ($"../Limites/PositionIzqDown").global_position
+onready var inf_der = ($"../Limites/PositionDerDown").global_position
+
+
+
 func _ready() -> void:
 	viewport_rect = get_viewport_rect()
+	print(inf_der)
+	print(sup_izq)
 	set_process(get_child_count() > 0)
+
 
 
 func _process(_delta: float) -> void:
 	camera_rect = Rect2(get_child(0).global_position, Vector2())
+	
 	for index in get_child_count():
 		if index == 0:
 			continue
 		camera_rect = camera_rect.expand(get_child(index).global_position)
+		
+	var pos = camera_rect.position
+	var end = camera_rect.end
+	
+	pos.x = clamp (pos.x,  sup_izq.x, inf_der.x)
+	pos.x = clamp (pos.y,  sup_izq.y, inf_der.y)
+	end.x = clamp (end.x,  sup_izq.x, inf_der.x)
+	end.y = clamp (end.y,  sup_izq.y, inf_der.y)
+	
+	camera_rect = Rect2(pos, end-pos)
 	
 	offset = calculate_center(camera_rect)
 	zoom = calculate_zoom(camera_rect, viewport_rect.size)
