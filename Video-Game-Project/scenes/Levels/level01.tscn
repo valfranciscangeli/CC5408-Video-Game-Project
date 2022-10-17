@@ -1921,7 +1921,7 @@ scale = Vector2( 1, 1.2 )
 z_index = 7
 z_as_relative = false
 frames = SubResource( 57 )
-frame = 3
+frame = 8
 speed_scale = 0.5
 playing = true
 
@@ -1930,6 +1930,7 @@ position = Vector2( 902, 181 )
 scale = Vector2( 1, 1.2 )
 z_index = 1
 frames = SubResource( 82 )
+frame = 2
 playing = true
 
 [node name="fountain" type="AnimatedSprite" parent="Decoración"]
@@ -1961,6 +1962,7 @@ shape = SubResource( 84 )
 
 [node name="FollowerCamera" parent="." instance=ExtResource( 89 )]
 position = Vector2( -3, 2 )
+debug_mode = false
 
 [node name="Pinky" parent="FollowerCamera" instance=ExtResource( 90 )]
 position = Vector2( 234, 7 )
