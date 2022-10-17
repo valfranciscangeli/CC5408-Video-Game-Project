@@ -11,7 +11,7 @@ height = 18.0
 
 [sub_resource type="Animation" id=11]
 resource_name = "Jump_up"
-length = 0.62
+length = 0.4
 tracks/0/type = "value"
 tracks/0/path = NodePath("Pivot/Sprite:hframes")
 tracks/0/interp = 1
@@ -184,7 +184,7 @@ tracks/2/keys = {
 
 [sub_resource type="Animation" id=4]
 resource_name = "run"
-length = 0.55
+length = 0.6
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("Pivot/Sprite:texture")
