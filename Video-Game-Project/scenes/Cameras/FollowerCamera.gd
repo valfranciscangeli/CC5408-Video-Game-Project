@@ -3,9 +3,13 @@ extends Camera2D
 export(float, 0.1, 0.5) var zoom_offset : float = 0.2
 export var debug_mode : bool = false
 
-var camera_rect : = Rect2()
+var camera_rect : = Rect2(0, 0, 0, 0)
 var viewport_rect : = Rect2()
 
+#var min_width = 420 /20
+#var min_height = 300 /20
+var min_width = 0
+var min_height = 0
 
 onready var sup_izq = ($"../Limites/PositionIzqUp").global_position
 #onready var sup_der = ($"../Limites/PositionDerUp").global_position
@@ -22,23 +26,29 @@ func _ready() -> void:
 
 
 
-func _process(_delta: float) -> void:
-	camera_rect = Rect2(get_child(0).global_position, Vector2())
-	
-	for index in get_child_count():
-		if index == 0:
-			continue
-		camera_rect = camera_rect.expand(get_child(index).global_position)
-		
-	var pos = camera_rect.position
-	var end = camera_rect.end
-	
-	pos.x = clamp (pos.x,  sup_izq.x, inf_der.x)
-	pos.x = clamp (pos.y,  sup_izq.y, inf_der.y)
-	end.x = clamp (end.x,  sup_izq.x, inf_der.x)
-	end.y = clamp (end.y,  sup_izq.y, inf_der.y)
-	
-	camera_rect = Rect2(pos, end-pos)
+func _physics_process(_delta: float) -> void:
+	print(get_child_count())
+	if get_child_count() == 1:
+		camera_rect.position = get_child(0).global_position
+		camera_rect.size = Vector2(0,0)
+	else:
+		for index in get_child_count():
+			if index == 0:
+				#camera_rect = Rect2(get_child(0).global_position, Vector2())
+				camera_rect.position = get_child(0).global_position
+				camera_rect.size = Vector2(0,0)
+			else:
+				camera_rect = camera_rect.expand(get_child(index).global_position)
+			
+				var pos = camera_rect.position
+				var end = camera_rect.end
+				
+				pos.x = clamp (pos.x,  sup_izq.x + min_width, inf_der.x + min_width)
+				pos.x = clamp (pos.y,  sup_izq.y + min_height, inf_der.y + min_height)
+				end.x = clamp (end.x,  sup_izq.x - min_width, inf_der.x - min_width)
+				end.y = clamp (end.y,  sup_izq.y - min_height, inf_der.y - min_height)
+				
+				camera_rect = Rect2(pos, end-pos)
 	
 	offset = calculate_center(camera_rect)
 	zoom = calculate_zoom(camera_rect, viewport_rect.size)

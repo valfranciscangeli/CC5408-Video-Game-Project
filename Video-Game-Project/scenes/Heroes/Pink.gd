@@ -14,6 +14,12 @@ var SPEED = 200
 var JUMP_SPEED = 300
 var GRAVITY = 10
 
+# limits ===========
+onready var sup_izq = ($"../../Limites/PositionIzqUp").global_position
+#onready var sup_der = ($"../../Limites/PositionDerUp").global_position
+#onready var inf_izq = ($"../../Limites/PositionIzqDown").global_position
+onready var inf_der = ($"../../Limites/PositionDerDown").global_position
+
 # sprites ========
 onready var pivot = $Pivot
 onready var sprite = $Pivot/Sprite
@@ -32,15 +38,12 @@ func _physics_process(_delta):
 	
 	var move_input = Input.get_axis(move_left_action, move_right_action)
 	
-	
 	velocity.x = move_toward(velocity.x, move_input * SPEED, ACCELERATION)
 	
 	velocity.y += GRAVITY
 	
 	if is_on_floor() and Input.is_action_just_pressed(jump_action):
 		velocity.y = -JUMP_SPEED
-	
-	#
 	
 	for i in get_slide_count():
 		var collision = get_slide_collision(i)
@@ -50,8 +53,10 @@ func _physics_process(_delta):
 			var object: Node2D = collision.collider 
 			var direction = (global_position - object.global_position).normalized()
 			velocity = direction * SPEED * 2 
-			
 	
+	# si pasan del limite del mapa se eliminan de la escena
+	if global_position.y >= inf_der.y:
+		queue_free()
 	
 	
 	
