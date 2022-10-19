@@ -28,7 +28,7 @@ func _ready():
 
 
 func _physics_process(_delta):
-	velocity = move_and_slide(velocity, Vector2.UP)
+	velocity = move_and_slide(velocity, Vector2.UP, false,4,0.785398,false)
 	
 	var move_input = Input.get_axis(move_left_action, move_right_action)
 	
@@ -39,6 +39,21 @@ func _physics_process(_delta):
 	
 	if is_on_floor() and Input.is_action_just_pressed(jump_action):
 		velocity.y = -JUMP_SPEED
+	
+	#
+	
+	for i in get_slide_count():
+		var collision = get_slide_collision(i)
+		print(collision.collider.name)
+		if collision.collider.collision_layer == 4:
+			print(collision.collider.collision_layer)
+			var object: Node2D = collision.collider 
+			var direction = (global_position - object.global_position).normalized()
+			velocity = direction * SPEED * 2 
+			
+	
+	
+	
 	
 	# Animations
 	
@@ -57,5 +72,6 @@ func _physics_process(_delta):
 		playback.travel("Jump_up")
 	else:
 		playback.travel("jump_down")
+		
 		
 	

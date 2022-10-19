@@ -126,6 +126,12 @@ pick3={
  ]
 }
 
+[layer_names]
+
+2d_physics/layer_1="wall"
+2d_physics/layer_2="players"
+2d_physics/layer_3="objets"
+
 [physics]
 
 common/enable_pause_aware_picking=true

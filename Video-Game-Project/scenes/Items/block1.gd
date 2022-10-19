@@ -5,7 +5,7 @@ onready var SPEED = 200
 onready var item = get_node("../FollowerCamera/Pinky/Pivot/Item")
 
 func _integrate_forces(_state):
-	rotation_degrees = 0
+	rotation_degrees = 10
 
 func _physics_process(_delta):
 	if picked == true:
