@@ -13,10 +13,10 @@ var credits = [
 			"name": "Free Green Zone Tileset Pixel Art",
 			"author": "free-game-assets.itch.io"
 		},
-#		{
-#			"name": "Starry Space Parallaxing Background",
-#			"author": "enjl.itch.io"
-#		},
+		{
+			"name": "Pixel Mart",
+			"author": "ghostpixxells.itch.io"
+		},
 #		{
 #			"name": "Crafting Materials",
 #			"author": "beast-pixels.itch.io"
@@ -59,12 +59,11 @@ func _ready():
 			credits_container.add_child(h_separator)
 			credits_container.add_child(name_label)
 			credits_container.add_child(author_label)
-#
+
 	scroll_container.scroll_vertical = 0
 	set_physics_process(false)
 	yield(get_tree().create_timer(1.2), "timeout")
 	set_physics_process(true)
-		
 
 
 func _physics_process(_delta):
