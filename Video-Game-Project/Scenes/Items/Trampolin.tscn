@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/map1/3 Objects/Benches/3.png" type="Texture" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 10, 8.75363 )
+
+[node name="StaticBody2D" type="StaticBody2D"]
+position = Vector2( -1, -11 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 1, 10.6602 )
+scale = Vector2( 1.81881, 0.91662 )
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 1, 10 )
+scale = Vector2( 0.858002, 1.68793 )
+texture = ExtResource( 1 )
