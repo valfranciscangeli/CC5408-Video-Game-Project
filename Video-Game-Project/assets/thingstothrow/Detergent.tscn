@@ -8,6 +8,7 @@ friction = 10000.0
 rough = true
 
 [sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 8.2769, 9.47761 )
 
 [node name="Detergent" type="Node2D"]
 
@@ -22,10 +23,10 @@ script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="RigidBody2D"]
 position = Vector2( 1, -1 )
-scale = Vector2( 2.05482, 1.83041 )
+scale = Vector2( 1.028, 0.915 )
 texture = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
-position = Vector2( 1, 2 )
-scale = Vector2( 2.65871, 2.69536 )
+position = Vector2( 2, -0.700001 )
+scale = Vector2( 1.329, 1.34 )
 shape = SubResource( 3 )

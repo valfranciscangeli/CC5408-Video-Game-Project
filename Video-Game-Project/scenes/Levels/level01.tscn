@@ -1732,7 +1732,7 @@ extents = Vector2( 4, 4 )
 [sub_resource type="RectangleShape2D" id=84]
 extents = Vector2( 8, 8 )
 
-[node name="Level02" type="Node2D"]
+[node name="Level01" type="Node2D"]
 
 [node name="DayBackground3" parent="." instance=ExtResource( 18 )]
 position = Vector2( -577, 29 )
