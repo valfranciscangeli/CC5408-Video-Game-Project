@@ -1971,7 +1971,7 @@ collision_mask = 5
 script = ExtResource( 91 )
 
 [node name="Bluey" parent="FollowerCamera" instance=ExtResource( 93 )]
-position = Vector2( 412, 72 )
+position = Vector2( 389, 76 )
 collision_layer = 2
 collision_mask = 5
 script = ExtResource( 92 )
