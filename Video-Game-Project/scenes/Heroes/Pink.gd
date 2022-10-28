@@ -54,12 +54,14 @@ func _physics_process(_delta):
 	
 	for i in get_slide_count():
 		var collision = get_slide_collision(i)
-		print(collision.collider.name)
+
 		if collision.collider.collision_layer == 4:
-			print(collision.collider.collision_layer)
-			var object: Node2D = collision.collider 
-			var direction = (global_position - object.global_position).normalized()
-			velocity = direction * SPEED * 2 
+			var object: RigidBody2D = collision.collider 
+			print(object.linear_velocity.length())
+			if object.linear_velocity.length() > 3:
+				
+				var direction = (global_position - object.global_position).normalized()
+				velocity = direction * SPEED * 2 
 	
 	# si pasan del limite del mapa se eliminan de la escena
 	if global_position.y >= inf_der.y:

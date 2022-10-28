@@ -20,20 +20,20 @@ onready var inf_der = ($"../Limites/PositionDerDown").global_position
 
 func _ready() -> void:
 	viewport_rect = get_viewport_rect()
-	print(inf_der)
-	print(sup_izq)
+	#print(inf_der)
+	#print(sup_izq)
 	set_process(get_child_count() > 0)
 
 
 
 func _physics_process(_delta: float) -> void:
-	print(get_child_count())
+#	print(get_child_count())
 #	if get_child_count() == 1:
 #		camera_rect.position = get_child(0).global_position
 #		camera_rect.size = Vector2(0,0)
 #	else:
 	for index in get_child_count():
-		print("index: ", index)
+		#print("index: ", index)
 		var new_pos = get_child(index).global_position
 		if index == 0:
 			#camera_rect = Rect2(get_child(0).global_position, Vector2())

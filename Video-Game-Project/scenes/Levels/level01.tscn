@@ -1729,7 +1729,7 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=83]
-extents = Vector2( 4, 4 )
+extents = Vector2( 11.5, 10 )
 
 [sub_resource type="RectangleShape2D" id=84]
 extents = Vector2( 8, 8 )
@@ -1916,7 +1916,7 @@ scale = Vector2( 1, 1.2 )
 z_index = 7
 z_as_relative = false
 frames = SubResource( 57 )
-frame = 8
+frame = 1
 speed_scale = 0.5
 playing = true
 
@@ -1925,6 +1925,7 @@ position = Vector2( 902, 181 )
 scale = Vector2( 1, 1.2 )
 z_index = 1
 frames = SubResource( 82 )
+frame = 4
 playing = true
 
 [node name="fountain" type="AnimatedSprite" parent="Decoración"]
@@ -1932,12 +1933,12 @@ position = Vector2( 609, 262 )
 scale = Vector2( 1, 1.2 )
 z_index = 12
 frames = SubResource( 74 )
-frame = 2
+frame = 3
 playing = true
 
 [node name="block1" type="RigidBody2D" parent="."]
-position = Vector2( 272, 108 )
-collision_layer = 4
+position = Vector2( 287, 97 )
+collision_layer = 0
 gravity_scale = 2.0
 sleeping = true
 script = ExtResource( 88 )
@@ -1950,6 +1951,7 @@ texture = ExtResource( 87 )
 [node name="detector" type="Area2D" parent="block1"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="block1/detector"]
+position = Vector2( -0.5, -1 )
 shape = SubResource( 83 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="block1"]
@@ -1962,10 +1964,10 @@ position = Vector2( -3, 2 )
 [node name="Pinky" parent="FollowerCamera" instance=ExtResource( 90 )]
 position = Vector2( 241, 166 )
 collision_layer = 2
-collision_mask = 3
+collision_mask = 5
 
 [node name="Wooly" parent="FollowerCamera" instance=ExtResource( 15 )]
-position = Vector2( 739, 82 )
+position = Vector2( 146, 243 )
 collision_layer = 2
 collision_mask = 5
 script = ExtResource( 91 )
