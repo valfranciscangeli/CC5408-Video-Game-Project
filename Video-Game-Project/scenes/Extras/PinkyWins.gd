@@ -1,4 +1,5 @@
-extends "res://scenes/Heroes/Pink.gd"
+extends Label
+
 
 # Declare member variables here. Examples:
 # var a = 2
@@ -7,11 +8,7 @@ extends "res://scenes/Heroes/Pink.gd"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	move_right_action = "move_right2"
-	move_left_action = "move_left2"
-	jump_action = "jump2"
-	pick_action = "pick2"
-	my_face = "WoolyFace"
+	self.text = str(Game.get_pinky_wins())
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

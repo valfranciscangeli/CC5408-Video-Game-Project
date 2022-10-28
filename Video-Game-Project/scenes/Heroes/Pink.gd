@@ -28,6 +28,13 @@ onready var anim_player = $AnimationPlayer
 onready var anim_tree = $AnimationTree
 onready var playback = anim_tree.get("parameters/playback")
 
+# contador items ========
+onready var contador_canvas = "../../Contador"
+onready var my_face = "PinkyFace"
+
+# contador victorias ======
+var my_wins = 0
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	anim_tree.active = true
@@ -56,7 +63,8 @@ func _physics_process(_delta):
 	
 	# si pasan del limite del mapa se eliminan de la escena
 	if global_position.y >= inf_der.y:
-		queue_free()
+		get_node(contador_canvas+"/"+my_face).visible = false # eliminamos su carita de los personajes en mapa
+		queue_free() # eliminamos al personaje del mapa
 	
 	
 	

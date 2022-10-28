@@ -11,6 +11,7 @@ func _ready():
 	move_left_action = "move_left3"
 	jump_action = "jump3"
 	pick_action = "pick3"
+	my_face = "BlueyFace"
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
