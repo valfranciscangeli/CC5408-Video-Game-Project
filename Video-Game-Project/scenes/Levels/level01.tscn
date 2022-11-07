@@ -1739,6 +1739,7 @@ script = ExtResource( 96 )
 
 [node name="DayBackground" parent="." instance=ExtResource( 18 )]
 position = Vector2( 0, -60 )
+rotation = 0.514872
 scale = Vector2( 1.4, 1.4 )
 
 [node name="DayBackground2" parent="." instance=ExtResource( 18 )]
@@ -1916,7 +1917,7 @@ scale = Vector2( 1, 1.2 )
 z_index = 7
 z_as_relative = false
 frames = SubResource( 57 )
-frame = 1
+frame = 4
 speed_scale = 0.5
 playing = true
 
@@ -1925,7 +1926,7 @@ position = Vector2( 902, 181 )
 scale = Vector2( 1, 1.2 )
 z_index = 1
 frames = SubResource( 82 )
-frame = 4
+frame = 6
 playing = true
 
 [node name="fountain" type="AnimatedSprite" parent="Decoración"]
@@ -1938,7 +1939,7 @@ playing = true
 
 [node name="block1" type="RigidBody2D" parent="."]
 position = Vector2( 287, 97 )
-collision_layer = 0
+collision_layer = 4
 gravity_scale = 2.0
 sleeping = true
 script = ExtResource( 88 )
