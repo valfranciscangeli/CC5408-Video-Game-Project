@@ -1739,7 +1739,6 @@ script = ExtResource( 96 )
 
 [node name="DayBackground" parent="." instance=ExtResource( 18 )]
 position = Vector2( 0, -60 )
-rotation = 0.514872
 scale = Vector2( 1.4, 1.4 )
 
 [node name="DayBackground2" parent="." instance=ExtResource( 18 )]
