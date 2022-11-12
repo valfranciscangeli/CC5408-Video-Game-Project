@@ -1,5 +1,7 @@
 extends KinematicBody2D
 
+var debuggear = false
+
 export var move_right_action := "move_right"
 export var move_left_action := "move_left"
 export var jump_action := "jump"
@@ -13,6 +15,9 @@ var ACCELERATION = 100
 var SPEED = 200
 var JUMP_SPEED = 300
 var GRAVITY = 10
+
+var COYOTE_TIME = 0.1
+var airborn_time = 0
 
 # limits ===========
 onready var sup_izq = ($"../../Limites/PositionIzqUp").global_position
@@ -38,9 +43,10 @@ var my_wins = 0
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	anim_tree.active = true
+	#Engine.time_scale = 0.1
 
 
-func _physics_process(_delta):
+func _physics_process(delta):
 	velocity = move_and_slide(velocity, Vector2.UP, false,4,0.785398,false)
 	
 	var move_input = Input.get_axis(move_left_action, move_right_action)
@@ -49,8 +55,20 @@ func _physics_process(_delta):
 	
 	velocity.y += GRAVITY
 	
-	if is_on_floor() and Input.is_action_just_pressed(jump_action):
+	if is_on_floor():
+		airborn_time = 0
+	else:
+		airborn_time += delta
+	
+	if debuggear:
+		if (is_on_floor() or airborn_time <= COYOTE_TIME):
+			sprite.modulate = Color.green
+		else:
+			sprite.modulate = Color.red
+	
+	if (is_on_floor() or airborn_time <= COYOTE_TIME) and Input.is_action_just_pressed(jump_action):
 		velocity.y = -JUMP_SPEED
+		airborn_time = COYOTE_TIME
 	
 	for i in get_slide_count():
 		var collision = get_slide_collision(i)
@@ -90,3 +108,8 @@ func _physics_process(_delta):
 		
 		
 	
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("reset"):
+		get_tree().reload_current_scene()
+	if event.is_action_pressed("quit"):
+		get_tree().quit()
