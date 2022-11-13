@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://assets/map1/2 Background/Overlay_illumination.png" type="Texture" id=1]
+
+[node name="OverlayIllumination" type="Sprite"]
+modulate = Color( 0.458824, 0.0941176, 0.588235, 1 )
+position = Vector2( 214, 146 )
+scale = Vector2( 0.239444, 0.283333 )
+texture = ExtResource( 1 )

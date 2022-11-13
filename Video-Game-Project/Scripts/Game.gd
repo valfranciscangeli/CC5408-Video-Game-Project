@@ -7,10 +7,11 @@ var _bluey_wins = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	print ("Wins: \n")
-	print("Pinky:", _pinky_wins, "\n")
-	print("Wooly:", _wooly_wins, "\n")
-	print("Bluey:", _bluey_wins, "\n")
+	pass
+#	print ("Wins: \n")
+#	print("Pinky:", _pinky_wins, "\n")
+#	print("Wooly:", _wooly_wins, "\n")
+#	print("Bluey:", _bluey_wins, "\n")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
