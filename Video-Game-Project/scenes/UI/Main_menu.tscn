@@ -58,7 +58,7 @@ autowrap = true
 visible = false
 margin_top = 77.0
 margin_right = 370.0
-margin_bottom = 119.0
+margin_bottom = 127.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 5
@@ -102,6 +102,12 @@ margin_bottom = 241.0
 size_flags_horizontal = 5
 size_flags_vertical = 5
 text = "Exit"
+
+[node name="Map3" type="Button" parent="VBoxContainer"]
+margin_top = 245.0
+margin_right = 370.0
+margin_bottom = 283.0
+text = "Map3"
 
 [node name="PinkMonsterRun6" type="Sprite" parent="."]
 position = Vector2( 314, 215.007 )
