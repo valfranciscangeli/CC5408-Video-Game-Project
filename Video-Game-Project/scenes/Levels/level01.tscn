@@ -321,7 +321,7 @@ scale = Vector2( 1, 1.2 )
 z_index = 7
 z_as_relative = false
 frames = SubResource( 57 )
-frame = 3
+frame = 6
 speed_scale = 0.5
 playing = true
 
@@ -330,6 +330,7 @@ position = Vector2( 902, 181 )
 scale = Vector2( 1, 1.2 )
 z_index = 1
 frames = SubResource( 82 )
+frame = 1
 playing = true
 
 [node name="fountain" type="AnimatedSprite" parent="Decoración"]
@@ -337,6 +338,7 @@ position = Vector2( 609, 262 )
 scale = Vector2( 1, 1.2 )
 z_index = 12
 frames = SubResource( 74 )
+frame = 3
 playing = true
 
 [node name="block1" parent="." instance=ExtResource( 2 )]
@@ -349,19 +351,13 @@ position = Vector2( -3, 2 )
 
 [node name="Pinky" parent="FollowerCamera" instance=ExtResource( 90 )]
 position = Vector2( 241, 166 )
-collision_layer = 2
-collision_mask = 5
 
 [node name="Wooly" parent="FollowerCamera" instance=ExtResource( 15 )]
 position = Vector2( 146, 243 )
-collision_layer = 2
-collision_mask = 5
 script = ExtResource( 91 )
 
 [node name="Bluey" parent="FollowerCamera" instance=ExtResource( 93 )]
 position = Vector2( 389, 76 )
-collision_layer = 2
-collision_mask = 5
 script = ExtResource( 92 )
 
 [node name="Limites" type="Node2D" parent="."]

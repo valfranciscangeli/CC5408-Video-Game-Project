@@ -253,6 +253,8 @@ graph_offset = Vector2( 0, -42.0158 )
 [sub_resource type="AnimationNodeStateMachinePlayback" id=10]
 
 [node name="Pinky" type="KinematicBody2D"]
+collision_layer = 2
+collision_mask = 9
 script = ExtResource( 2 )
 
 [node name="Pivot" type="Node2D" parent="."]
