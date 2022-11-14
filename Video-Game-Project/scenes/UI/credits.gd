@@ -104,7 +104,7 @@ func _to_main_menu():
 	if not scroll_ended:
 		scroll_ended = true
 		yield(get_tree().create_timer(2), "timeout")
-		if get_tree().change_scene("res://scenes/UI/Main_menu.tscn") != OK:
+		if get_tree().change_scene("res://Scenes/UI/Main_menu.tscn") != OK:
 			print ("An unexpected error occured when trying to switch to the Main Menu scene")
 
 

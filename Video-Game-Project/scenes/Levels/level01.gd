@@ -24,7 +24,7 @@ func _process(_delta):
 			Game.add_bluey_wins()
 		
 		# cambiamos a escena de que el nivel terminó
-		if get_tree().change_scene("res://scenes/Wins/FinNivel.tscn") != OK:
+		if get_tree().change_scene("res://Scenes/Wins/FinNivel.tscn") != OK:
 			print ("An unexpected error occured when trying to switch to the FinNivel scene")
 	
 	# opcion para salir del juego (tecla escape)

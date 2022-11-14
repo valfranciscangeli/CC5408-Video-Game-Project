@@ -14,7 +14,7 @@ func _ready():
 	print("Bluey:", Game.get_bluey_wins(), "\n")
 	
 	#temporal:
-	if get_tree().change_scene("res://scenes/Levels/level01.tscn") != OK:
+	if get_tree().change_scene("res://Scenes/Levels/level01.tscn") != OK:
 		print ("An unexpected error occured when trying to switch to the Level01 scene")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
