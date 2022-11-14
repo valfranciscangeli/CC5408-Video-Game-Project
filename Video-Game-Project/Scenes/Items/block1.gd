@@ -46,7 +46,11 @@ func to_throw_objects(player_name):
 			#activamos capa de colision de objeto lanzado 
 			set_collision_layer_bit(3,true)
 			picked = false
-			linear_velocity.x = 200 * item.scale.x
+			linear_velocity.x = 300 * item.scale.x
+			add_collision_exception_with(b)
+			yield(get_tree().create_timer(0.2), "timeout")
+			remove_collision_exception_with(b)
+			
 
 func pick_objects(player_name):
 	

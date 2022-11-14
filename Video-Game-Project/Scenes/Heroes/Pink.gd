@@ -69,16 +69,15 @@ func _physics_process(delta):
 	if (is_on_floor() or airborn_time <= COYOTE_TIME) and Input.is_action_just_pressed(jump_action):
 		velocity.y = -JUMP_SPEED
 		airborn_time = COYOTE_TIME
-	#--------------------------------------------------------------------
-	#for i in get_slide_count():
-	#	var collision = get_slide_collision(i)
 
-	#	if collision.collider.collision_layer == 4:
-	#		var object: RigidBody2D = collision.collider 
-	#		if object.linear_velocity.length() > 3:
-				
-	#			var direction = (global_position - object.global_position).normalized()
-	#			velocity = direction * SPEED * 2 
+	for i in get_slide_count():
+		var collision = get_slide_collision(i)
+
+		if collision.collider.collision_layer == 12:
+			var object: RigidBody2D = collision.collider 
+			if object.linear_velocity.length() > 3:
+				var direction = object.linear_velocity.normalized()
+				velocity = direction * SPEED * 3 
 	#-------------------------------------------------------------------
 	
 	# si pasan del limite del mapa se eliminan de la escena
