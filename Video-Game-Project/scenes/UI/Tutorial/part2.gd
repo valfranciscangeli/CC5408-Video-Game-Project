@@ -1,8 +1,8 @@
 extends MarginContainer
 
-onready var pinky = $VBoxContainer2/Pinky
-onready var wooly = $VBoxContainer2/Wooly
-onready var bluey = $VBoxContainer2/Bluey
+onready var pinky = $VBoxContainer2/VBoxContainer/HBoxContainer/Pinky
+onready var wooly = $VBoxContainer2/VBoxContainer/HBoxContainer2/Wooly
+onready var bluey = $VBoxContainer2/VBoxContainer/HBoxContainer3/Bluey
 
 func _ready():
 	pinky.connect("pressed",self,"_on_pinky_pressed")
