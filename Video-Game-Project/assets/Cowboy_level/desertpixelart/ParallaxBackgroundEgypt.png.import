@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/BG.svg-f268c2f3188e43034931ceb05767a678.stex"
+path="res://.import/ParallaxBackgroundEgypt.png-b738512fc67c1bdeca23b73eaf82cb10.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Cowboy_level/svg/BG.svg"
-dest_files=[ "res://.import/BG.svg-f268c2f3188e43034931ceb05767a678.stex" ]
+source_file="res://assets/Cowboy_level/desertpixelart/ParallaxBackgroundEgypt.png"
+dest_files=[ "res://.import/ParallaxBackgroundEgypt.png-b738512fc67c1bdeca23b73eaf82cb10.stex" ]
 
 [params]
 
