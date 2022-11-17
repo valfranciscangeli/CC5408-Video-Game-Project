@@ -1,7 +1,10 @@
-[gd_scene load_steps=65 format=2]
+[gd_scene load_steps=67 format=2]
 
 [ext_resource path="res://Scenes/TileMap.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Scenes/Items/block1.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Items/coffee_bag.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Items/detergent.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Items/banana.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Items/meat.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/Heroes/Wooly.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Scenes/day_background.tscn" type="PackedScene" id=18]
 [ext_resource path="res://assets/map1/4 Animated objects/Fountain.png" type="Texture" id=28]
@@ -38,7 +41,6 @@
 [ext_resource path="res://Scenes/Heroes/Wooly.gd" type="Script" id=91]
 [ext_resource path="res://Scenes/Heroes/Bluey.gd" type="Script" id=92]
 [ext_resource path="res://Scenes/Heroes/Bluey.tscn" type="PackedScene" id=93]
-[ext_resource path="res://assets/thingstothrow/Detergent.tscn" type="PackedScene" id=94]
 [ext_resource path="res://Scenes/Extras/Contador.tscn" type="PackedScene" id=95]
 [ext_resource path="res://Scenes/Levels/level01.gd" type="Script" id=96]
 
@@ -158,6 +160,7 @@ position = Vector2( 1038, -55 )
 scale = Vector2( 1.4, 1.4 )
 
 [node name="TileMap" parent="." instance=ExtResource( 1 )]
+tile_data = PoolIntArray( 393218, 21, 0, 393219, 536870933, 0, 458779, 61, 0, 524311, 536870930, 0, 524313, 18, 0, 524333, 536870930, 0, 524335, 536870928, 0, 720938, 45, 0, 786436, 15, 0, 786444, 536870935, 0, 786446, 536870934, 0, 786448, 23, 0, 786484, 536870935, 0, 786486, 536870934, 0, 786488, 23, 0, 786494, 536870927, 0, 1179653, 536870943, 0, 1179655, 536870942, 0, 1179657, 536870942, 0, 1179659, 536870942, 0, 1179661, 536870944, 0, 1179704, 536870943, 0, 1179706, 536870942, 0, 1179708, 536870942, 0, 1179710, 536870942, 0, 1179712, 536870944, 0, 1245210, 536870943, 0, 1245212, 536870942, 0, 1245214, 536870942, 0, 1245216, 536870942, 0, 1245218, 536870942, 0, 1245220, 536870942, 0, 1245222, 536870942, 0, 1245224, 536870942, 0, 1245226, 536870942, 0, 1245228, 536870942, 0, 1245230, 536870944, 0, 1310725, 536870940, 0, 1310727, 536870939, 0, 1310729, 1073741864, 0, 1310731, 536870938, 0, 1310733, 536870937, 0, 1310776, 536870940, 0, 1310778, 26, 0, 1310780, 27, 0, 1310782, -1610612696, 0, 1310784, 28, 0, 1376282, 536870949, 0, 1376284, 1073741863, 0, 1376286, 536870952, 0, 1376288, 536870952, 0, 1376290, 536870953, 0, 1376292, 536870953, 0, 1376294, 536870953, 0, 1376296, 536870954, 0, 1376298, 536870955, 0, 1376300, 1073741862, 0, 1376302, 37, 0, 1441797, 536870949, 0, 1441799, 536870948, 0, 1441801, 536870948, 0, 1441803, 536870948, 0, 1441805, 37, 0, 1441848, 536870949, 0, 1441850, 536870948, 0, 1441852, 536870948, 0, 1441854, 536870948, 0, 1441856, 37, 0, 1507356, 536870949, 0, 1507358, 36, 0, 1507360, 536870948, 0, 1507362, 36, 0, 1507364, 536870948, 0, 1507366, 36, 0, 1507368, 536870948, 0, 1507370, 36, 0, 1507372, 37, 0 )
 
 [node name="Decoración" type="Node2D" parent="."]
 
@@ -219,7 +222,7 @@ position = Vector2( 676, 274 )
 texture = ExtResource( 56 )
 
 [node name="2" type="Sprite" parent="Decoración"]
-position = Vector2( 56, 46 )
+position = Vector2( 41, 92 )
 texture = ExtResource( 51 )
 
 [node name="14" type="Sprite" parent="Decoración"]
@@ -341,13 +344,29 @@ frames = SubResource( 74 )
 frame = 2
 playing = true
 
-[node name="block1" parent="." instance=ExtResource( 2 )]
+[node name="ThrowableObjects" type="Node2D" parent="."]
+
+[node name="Banana" parent="ThrowableObjects" instance=ExtResource( 4 )]
+position = Vector2( 217, 272 )
+
+[node name="CoffeeBag" parent="ThrowableObjects" instance=ExtResource( 2 )]
+position = Vector2( 214, 163 )
+
+[node name="Detergent" parent="ThrowableObjects" instance=ExtResource( 3 )]
+position = Vector2( 472, 295 )
+
+[node name="Detergent2" parent="ThrowableObjects" instance=ExtResource( 3 )]
+position = Vector2( 60, 85 )
+
+[node name="Meat" parent="ThrowableObjects" instance=ExtResource( 5 )]
+position = Vector2( 417, 118 )
 
 [node name="Contador" parent="." instance=ExtResource( 95 )]
 follow_viewport_enable = false
 
 [node name="FollowerCamera" parent="." instance=ExtResource( 89 )]
 position = Vector2( -3, 2 )
+debug_mode = false
 
 [node name="Pinky" parent="FollowerCamera" instance=ExtResource( 90 )]
 position = Vector2( 241, 166 )
@@ -374,6 +393,3 @@ position = Vector2( -1128, 2 )
 
 [node name="PositionDerUp" type="Position2D" parent="Limites"]
 position = Vector2( 1, -390 )
-
-[node name="detergente" parent="." instance=ExtResource( 94 )]
-position = Vector2( 411, 92 )

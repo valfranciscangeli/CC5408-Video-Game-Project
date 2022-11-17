@@ -5,12 +5,18 @@ onready var SPEED = 200
 var item = null 
 export var velocity_to_throw = 10
 
+# limits ===========
+onready var sup_izq = ($"../../Limites/PositionIzqUp").global_position
+#onready var sup_der = ($"../../Limites/PositionDerUp").global_position
+#onready var inf_izq = ($"../../Limites/PositionIzqDown").global_position
+onready var inf_der = ($"../../Limites/PositionDerDown").global_position
+
 
 func _integrate_forces(_state):
 	rotation_degrees = 10
 
 func _physics_process(_delta):
-	
+
 	if picked == true:
 		collision.disabled = true
 		self.position = item.global_position
@@ -21,6 +27,12 @@ func _physics_process(_delta):
 		sleeping = false
 		if linear_velocity.length_squared() < velocity_to_throw : 
 			set_collision_layer_bit(3,false)
+			
+#	# si pasan del limite del mapa se eliminan de la escena
+	if global_position.y >= inf_der.y:
+		print ('soy un objeto y me cai A')
+		queue_free() # eliminamos al objeto del mapa
+
 
 func _input(_event):
 	if _event.is_action_pressed("pick"):

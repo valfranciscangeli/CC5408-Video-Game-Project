@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Scenes/Items/block1.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Items/objeto.gd" type="Script" id=1]
 [ext_resource path="res://assets/thingstothrow/coffee_bag.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=83]
@@ -9,8 +9,8 @@ extents = Vector2( 11.5, 10 )
 [sub_resource type="RectangleShape2D" id=84]
 extents = Vector2( 8, 8 )
 
-[node name="block1" type="RigidBody2D"]
-position = Vector2( 287, 97 )
+[node name="CoffeeBag" type="RigidBody2D"]
+position = Vector2( 0, -1 )
 collision_layer = 4
 gravity_scale = 2.0
 sleeping = true
