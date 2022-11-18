@@ -1,4 +1,4 @@
-[gd_scene load_steps=67 format=2]
+[gd_scene load_steps=65 format=2]
 
 [ext_resource path="res://Scenes/TileMap.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Items/coffee_bag.tscn" type="PackedScene" id=2]
@@ -38,8 +38,6 @@
 [ext_resource path="res://assets/map1/4 Animated objects/Chest_open.png" type="Texture" id=80]
 [ext_resource path="res://Scenes/Cameras/follower_camera.tscn" type="PackedScene" id=89]
 [ext_resource path="res://Scenes/Heroes/Pink.tscn" type="PackedScene" id=90]
-[ext_resource path="res://Scenes/Heroes/Wooly.gd" type="Script" id=91]
-[ext_resource path="res://Scenes/Heroes/Bluey.gd" type="Script" id=92]
 [ext_resource path="res://Scenes/Heroes/Bluey.tscn" type="PackedScene" id=93]
 [ext_resource path="res://Scenes/Extras/Contador.tscn" type="PackedScene" id=95]
 [ext_resource path="res://Scenes/Levels/level01.gd" type="Script" id=96]
@@ -373,11 +371,9 @@ position = Vector2( 241, 166 )
 
 [node name="Wooly" parent="FollowerCamera" instance=ExtResource( 15 )]
 position = Vector2( 146, 243 )
-script = ExtResource( 91 )
 
 [node name="Bluey" parent="FollowerCamera" instance=ExtResource( 93 )]
 position = Vector2( 389, 76 )
-script = ExtResource( 92 )
 
 [node name="Limites" type="Node2D" parent="."]
 position = Vector2( 1146, 391 )
