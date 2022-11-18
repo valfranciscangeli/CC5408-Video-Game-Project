@@ -1,10 +1,14 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Scenes/Parallax/night_parallax_background.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Heroes/Pink.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/Cameras/Camera2D.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/map1/1 Tiles/Tile_51.png" type="Texture" id=4]
 [ext_resource path="res://assets/map1/1 Tiles/Tile_50.png" type="Texture" id=5]
+[ext_resource path="res://Scenes/Heroes/Bluey.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Items/rubber_duck.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/Extras/Contador.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/UI/Tutorial/Heroes/pinkyUI.gd" type="Script" id=9]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
@@ -57,6 +61,7 @@ points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
 1/z_index = 0
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource( 9 )
 
 [node name="ParallaxBackground" parent="." instance=ExtResource( 1 )]
 
@@ -65,18 +70,22 @@ position = Vector2( 2, 0 )
 tile_set = SubResource( 3 )
 cell_size = Vector2( 32, 32 )
 format = 1
-tile_data = PoolIntArray( 327688, 536870912, 0, 327689, 536870913, 0, 327690, 0, 0, 393217, 536870912, 0, 393218, 536870913, 0, 393219, 536870913, 0, 393220, 0, 0, 655359, 536870912, 0, 589824, 536870913, 0, 589825, 536870913, 0, 589826, 536870913, 0, 589827, 536870913, 0, 589828, 536870913, 0, 589829, 536870913, 0, 589830, 536870913, 0, 589831, 536870913, 0, 589832, 536870913, 0, 589833, 536870913, 0, 589834, 536870913, 0, 589835, 536870913, 0, 589836, 536870913, 0, 589837, 0, 0 )
+tile_data = PoolIntArray( 327688, 536870912, 0, 327689, 536870913, 0, 327690, 0, 0, 393217, 536870912, 0, 393218, 536870913, 0, 393219, 536870913, 0, 393220, 0, 0, 393232, 536870912, 0, 393233, 536870913, 0, 393234, 536870913, 0, 393235, 536870913, 0, 393236, 536870913, 0, 393237, 0, 0, 655359, 536870912, 0, 589824, 536870913, 0, 589825, 536870913, 0, 589826, 536870913, 0, 589827, 536870913, 0, 589828, 536870913, 0, 589829, 536870913, 0, 589830, 536870913, 0, 589831, 536870913, 0, 589832, 536870913, 0, 589833, 536870913, 0, 589834, 536870913, 0, 589835, 536870913, 0, 589836, 536870913, 0, 589837, 0, 0 )
 
-[node name="PinkyContainer" type="Node2D" parent="."]
+[node name="HeroesContainer" type="Node2D" parent="."]
 position = Vector2( 194, 154 )
 
-[node name="Pinky" parent="PinkyContainer" instance=ExtResource( 2 )]
+[node name="Pinky" parent="HeroesContainer" instance=ExtResource( 2 )]
 position = Vector2( -92, 4 )
 
-[node name="Camara" parent="PinkyContainer/Pinky" instance=ExtResource( 3 )]
+[node name="Camara" parent="HeroesContainer/Pinky" instance=ExtResource( 3 )]
 position = Vector2( -49, -9 )
 rotating = true
 zoom = Vector2( 0.65, 0.65 )
+
+[node name="Bluey" parent="HeroesContainer" instance=ExtResource( 6 )]
+position = Vector2( 498, 4 )
+scale = Vector2( -1, 1 )
 
 [node name="Limites" type="Node2D" parent="."]
 position = Vector2( 944, 376 )
@@ -128,3 +137,45 @@ text = "Grab this with E"
 align = 1
 valign = 1
 autowrap = true
+
+[node name="Label3" type="Label" parent="CanvasLayer"]
+margin_left = 523.0
+margin_top = 82.0
+margin_right = 871.0
+margin_bottom = 184.0
+grow_horizontal = 2
+grow_vertical = 2
+rect_scale = Vector2( 0.5, 0.5 )
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme_type_variation = "Label2"
+text = "Hit Bluey with the object with E"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="Label4" type="Label" parent="CanvasLayer"]
+visible = false
+margin_left = 799.0
+margin_top = 138.0
+margin_right = 1179.0
+margin_bottom = 240.0
+grow_horizontal = 2
+grow_vertical = 2
+rect_scale = Vector2( 0.5, 0.5 )
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme_type_variation = "Label2"
+text = "Bluey died
+You win this level"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="ObjectsContainer" type="Node2D" parent="."]
+
+[node name="RubberDuck" parent="ObjectsContainer" instance=ExtResource( 7 )]
+position = Vector2( 306, 142 )
+
+[node name="Contador" parent="." instance=ExtResource( 8 )]
+visible = false

@@ -118,22 +118,21 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 script = ExtResource( 2 )
 
 [node name="FollowerCamera" parent="." instance=ExtResource( 1 )]
+debug_mode = false
 
 [node name="Pinky" parent="FollowerCamera" instance=ExtResource( 5 )]
 position = Vector2( 232, 184 )
 
 [node name="Wooly" parent="FollowerCamera" instance=ExtResource( 4 )]
-visible = false
 position = Vector2( 336, 168 )
 
 [node name="Bluey" parent="FollowerCamera" instance=ExtResource( 3 )]
-visible = false
 position = Vector2( 272, 232 )
 
 [node name="Limites" type="Node2D" parent="."]
 
 [node name="PositionDerDown" type="Position2D" parent="Limites"]
-position = Vector2( 896, 448 )
+position = Vector2( 960, 448 )
 
 [node name="PositionIzqUp" type="Position2D" parent="Limites"]
 position = Vector2( -16, 16 )
@@ -151,3 +150,4 @@ visible = false
 tile_set = SubResource( 2 )
 cell_size = Vector2( 16, 16 )
 format = 1
+tile_data = PoolIntArray( 1114121, 3, 0, 1114122, 3, 0, 1114123, 3, 0, 1114124, 3, 0, 1114125, 3, 0, 1114126, 3, 0, 1114127, 3, 0, 1179651, 3, 0, 1179652, 3, 0, 1179653, 3, 0, 1179654, 3, 0, 1179655, 3, 0, 1179656, 3, 0, 1179657, 3, 0, 1179664, 3, 0, 1179665, 3, 0, 1179666, 3, 0, 1179667, 3, 0, 1179668, 3, 0, 1179669, 3, 0, 1179670, 3, 0, 1179671, 3, 0 )
