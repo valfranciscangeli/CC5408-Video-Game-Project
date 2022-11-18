@@ -1,9 +1,9 @@
 extends MarginContainer
-onready var play = $VBoxContainer/Play
-onready var credits = $VBoxContainer/Credits
-onready var exit = $VBoxContainer/Exit
-onready var tutorial = $VBoxContainer/Tutorial
-onready var map3 = $VBoxContainer/Map3
+onready var play = $VBoxContainer/VBoxContainer/Play
+onready var credits = $VBoxContainer/VBoxContainer/Credits
+onready var exit = $VBoxContainer/VBoxContainer/Exit
+onready var tutorial = $VBoxContainer/VBoxContainer/Tutorial
+onready var map3 = $VBoxContainer/VBoxContainer/Map3
 
 
 func _ready():
