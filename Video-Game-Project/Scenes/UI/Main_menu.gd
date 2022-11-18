@@ -7,7 +7,7 @@ onready var play = $VBoxContainer/VBoxContainer/Play
 onready var credits = $VBoxContainer/VBoxContainer/Credits
 onready var exit = $VBoxContainer/VBoxContainer/Exit
 onready var tutorial = $VBoxContainer/VBoxContainer/Tutorial
-onready var map3 = $VBoxContainer/VBoxContainer/Map3
+onready var map2 = $"VBoxContainer/VBoxContainer/Map 2 (beta)"
 
 # ====== animations =====
 onready var animated_pinky = $AnimationsContainer/AnimatedPinky
@@ -20,7 +20,7 @@ func _ready():
 	play.connect("pressed",self,"_on_play_pressed")
 	credits.connect("pressed",self,"_on_credits_pressed")
 	tutorial.connect("pressed", self, "_on_tutorial_pressed")
-	map3.connect("pressed", self, "_on_map3_pressed")
+	map2.connect("pressed", self, "_on_map3_pressed")
 	
 	animated_pinky.play("run")
 	animated_wooly.play("throw")
@@ -42,5 +42,5 @@ func _on_tutorial_pressed():
 		print ("An unexpected error occured when trying to switch to the Tutorial part 1 scene")
 
 func _on_map3_pressed():
-	if get_tree().change_scene("res://Scenes/Levels/level03.tscn") != OK:
-		print ("An unexpected error occured when trying to switch to the Level03 scene")
+	if get_tree().change_scene("res://Scenes/Levels/level02.tscn") != OK:
+		print ("An unexpected error occured when trying to switch to the Level02 scene")

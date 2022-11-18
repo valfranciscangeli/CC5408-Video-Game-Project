@@ -29,6 +29,7 @@ __meta__ = {
 
 [node name="Background" type="Sprite" parent="."]
 position = Vector2( 225, 140 )
+scale = Vector2( 0.995833, 1.00458 )
 texture = ExtResource( 5 )
 
 [node name="OverlayIllumination" type="Sprite" parent="."]
@@ -107,27 +108,24 @@ size_flags_horizontal = 5
 size_flags_vertical = 5
 text = "Exit"
 
-[node name="Map3" type="Button" parent="VBoxContainer/VBoxContainer"]
+[node name="Map 2 (beta)" type="Button" parent="VBoxContainer/VBoxContainer"]
 margin_top = 168.0
 margin_right = 370.0
 margin_bottom = 206.0
-text = "Map3"
-
+text = "Map 2 (beta)"
 
 [node name="AnimationsContainer" type="Node2D" parent="."]
 
 [node name="AnimatedBluey" parent="AnimationsContainer" instance=ExtResource( 9 )]
-position = Vector2( 370, 83 )
+position = Vector2( 361, 88 )
 rotation = 3.14159
 scale = Vector2( 3.5, -3.5 )
 animation = "throw"
 
 [node name="AnimatedPinky" parent="AnimationsContainer" instance=ExtResource( 7 )]
-position = Vector2( 343, 209 )
+position = Vector2( 343, 215 )
 scale = Vector2( 3.5, 3.5 )
 
 [node name="AnimatedWooly" parent="AnimationsContainer" instance=ExtResource( 6 )]
-position = Vector2( 62, 126 )
+position = Vector2( 65, 130 )
 scale = Vector2( 3.5, 3.5 )
-animation = "throw"
-

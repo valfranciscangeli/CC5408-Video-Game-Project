@@ -12,8 +12,6 @@ var min_width = 0
 var min_height = 0
 
 onready var sup_izq = ($"../Limites/PositionIzqUp").global_position
-#onready var sup_der = ($"../Limites/PositionDerUp").global_position
-#onready var inf_izq = ($"../Limites/PositionIzqDown").global_position
 onready var inf_der = ($"../Limites/PositionDerDown").global_position
 
 

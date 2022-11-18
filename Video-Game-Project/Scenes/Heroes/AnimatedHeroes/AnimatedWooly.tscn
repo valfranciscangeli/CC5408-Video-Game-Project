@@ -22,7 +22,7 @@ region = Rect2( 96, 0, 32, 32 )
 animations = [ {
 "frames": [ SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ) ],
 "loop": true,
-"name": "default",
+"name": "throw",
 "speed": 5.0
 } ]
 
@@ -30,5 +30,6 @@ animations = [ {
 position = Vector2( 3, 29 )
 scale = Vector2( 2, 2 )
 frames = SubResource( 14 )
+animation = "throw"
 speed_scale = 0.5
 playing = true

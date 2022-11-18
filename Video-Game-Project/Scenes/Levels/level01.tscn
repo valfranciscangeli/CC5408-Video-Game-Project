@@ -383,9 +383,3 @@ position = Vector2( 2, -24 )
 
 [node name="PositionIzqUp" type="Position2D" parent="Limites"]
 position = Vector2( -1133, -390 )
-
-[node name="PositionIzqDown" type="Position2D" parent="Limites"]
-position = Vector2( -1128, 2 )
-
-[node name="PositionDerUp" type="Position2D" parent="Limites"]
-position = Vector2( 1, -390 )
