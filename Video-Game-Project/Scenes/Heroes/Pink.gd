@@ -32,6 +32,7 @@ onready var item = $Pivot/Item
 onready var anim_player = $AnimationPlayer
 onready var anim_tree = $AnimationTree
 onready var playback = anim_tree.get("parameters/playback")
+onready var dust = $Pivot/Dust
 
 # contador items ========
 onready var contador_canvas = "../../Contador"
@@ -43,6 +44,8 @@ var my_wins = 0
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	anim_tree.active = true
+	print(dust)
+	
 	#Engine.time_scale = 0.1
 
 
@@ -85,7 +88,7 @@ func _physics_process(delta):
 		get_node(contador_canvas+"/"+my_face).visible = false # eliminamos su carita de los personajes en mapa
 		queue_free() # eliminamos al personaje del mapa
 	
-	
+	dust.visible = is_on_floor() and abs(velocity.x) > 5
 	
 	# Animations
 	
@@ -98,6 +101,7 @@ func _physics_process(delta):
 		
 	if abs(velocity.x) > 0 and is_on_floor():
 		playback.travel("run")
+		
 	elif abs(velocity.x) == 0 and is_on_floor():
 		playback.travel("idle")
 	elif velocity.y < 0:
