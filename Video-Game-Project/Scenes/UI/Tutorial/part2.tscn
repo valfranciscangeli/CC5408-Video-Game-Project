@@ -2,9 +2,9 @@
 
 [ext_resource path="res://Scenes/UI/Tutorial/part2.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/OverlayIllumination.tscn" type="PackedScene" id=2]
-[ext_resource path="res://assets/heroes/1 Pink_Monster/Pink_Monster_Throw_4.png" type="Texture" id=3]
-[ext_resource path="res://assets/heroes/3 Dude_Monster/Dude_Monster_Throw_4.png" type="Texture" id=4]
-[ext_resource path="res://assets/heroes/2 Owlet_Monster/Owlet_Monster_Throw_4.png" type="Texture" id=5]
+[ext_resource path="res://Scenes/Heroes/AnimatedHeroes/AnimatedPinky.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Heroes/AnimatedHeroes/AnimatedWooly.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Heroes/AnimatedHeroes/AnimatedBluey.tscn" type="PackedScene" id=5]
 
 [node name="Part2Container" type="MarginContainer"]
 margin_right = 421.0
@@ -18,7 +18,7 @@ position = Vector2( 208, 140 )
 margin_left = 25.0
 margin_top = 25.0
 margin_right = 396.0
-margin_bottom = 278.0
+margin_bottom = 274.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 7
@@ -51,48 +51,72 @@ align = 1
 valign = 1
 autowrap = true
 
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer2"]
+[node name="HSeparator2" type="HSeparator" parent="VBoxContainer2"]
 margin_top = 131.0
 margin_right = 371.0
-margin_bottom = 253.0
+margin_bottom = 151.0
+theme_type_variation = "SmallHSeparator"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer2"]
+margin_left = 5.0
+margin_top = 155.0
+margin_right = 365.0
+margin_bottom = 197.0
+size_flags_horizontal = 4
+size_flags_vertical = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer2/VBoxContainer"]
-margin_right = 371.0
+margin_right = 360.0
 margin_bottom = 38.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 
 [node name="Pinky" type="Button" parent="VBoxContainer2/VBoxContainer/HBoxContainer"]
 margin_right = 112.0
 margin_bottom = 38.0
 text = "Pinky"
+icon_align = 1
 
-[node name="Sprite" type="Sprite" parent="VBoxContainer2/VBoxContainer/HBoxContainer"]
-position = Vector2( 289, 18 )
-texture = ExtResource( 3 )
+[node name="VSeparator" type="VSeparator" parent="VBoxContainer2/VBoxContainer/HBoxContainer"]
+margin_left = 116.0
+margin_right = 120.0
+margin_bottom = 38.0
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer2/VBoxContainer"]
-margin_top = 42.0
-margin_right = 371.0
-margin_bottom = 80.0
-
-[node name="Wooly" type="Button" parent="VBoxContainer2/VBoxContainer/HBoxContainer2"]
-margin_right = 112.0
+[node name="Wooly" type="Button" parent="VBoxContainer2/VBoxContainer/HBoxContainer"]
+margin_left = 124.0
+margin_right = 236.0
 margin_bottom = 38.0
 text = "Wooly"
 
-[node name="Sprite" type="Sprite" parent="VBoxContainer2/VBoxContainer/HBoxContainer2"]
-position = Vector2( 212, 19 )
-texture = ExtResource( 5 )
+[node name="VSeparator2" type="VSeparator" parent="VBoxContainer2/VBoxContainer/HBoxContainer"]
+margin_left = 240.0
+margin_right = 244.0
+margin_bottom = 38.0
 
-[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer2/VBoxContainer"]
-margin_top = 84.0
-margin_right = 371.0
-margin_bottom = 122.0
-
-[node name="Bluey" type="Button" parent="VBoxContainer2/VBoxContainer/HBoxContainer3"]
-margin_right = 112.0
+[node name="Bluey" type="Button" parent="VBoxContainer2/VBoxContainer/HBoxContainer"]
+margin_left = 248.0
+margin_right = 360.0
 margin_bottom = 38.0
 text = "Bluey"
 
-[node name="Sprite" type="Sprite" parent="VBoxContainer2/VBoxContainer/HBoxContainer3"]
-position = Vector2( 267, 16 )
-texture = ExtResource( 4 )
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer2/VBoxContainer"]
+margin_left = 180.0
+margin_top = 42.0
+margin_right = 180.0
+margin_bottom = 42.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+alignment = 1
+
+[node name="AnimatedPinky" parent="VBoxContainer2/VBoxContainer/HBoxContainer2" instance=ExtResource( 3 )]
+animation = "run"
+
+[node name="AnimatedWooly" parent="VBoxContainer2/VBoxContainer/HBoxContainer2" instance=ExtResource( 4 )]
+position = Vector2( 3, 30 )
+animation = "throw"
+
+[node name="AnimatedBluey" parent="VBoxContainer2/VBoxContainer/HBoxContainer2" instance=ExtResource( 5 )]
+position = Vector2( 123, 28 )
+animation = "throw"

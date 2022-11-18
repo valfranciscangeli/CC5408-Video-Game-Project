@@ -1,7 +1,7 @@
 extends MarginContainer
 
 
-func _process(delta):
+func _process(_delta):
 	
 	# opcion para salir del juego (tecla escape)
 	if Input.is_action_pressed("ui_home") or Input.is_action_pressed("ui_accept"):

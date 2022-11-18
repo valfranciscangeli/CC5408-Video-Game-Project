@@ -1,6 +1,8 @@
 extends Node2D
 onready var heroes_container = $HeroesContainer
 var my_name = "Pinky"
+var my_scene = "res://Scenes/UI/Tutorial/Heroes/pinkyUI.tscn"
+var my_win_scene = "res://Scenes/UI/Tutorial/PinkyWin.tscn"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -11,13 +13,13 @@ func _ready():
 func _process(_delta):
 	if heroes_container.get_child_count() == 1:
 		var hijo = heroes_container.get_child(0).name
-		if hijo == "Pinky":
-			if get_tree().change_scene("res://Scenes/UI/Tutorial/YouWin.tscn") != OK:
-				print ("An unexpected error occured when trying to switch to the You Win UI scene")
+		if hijo == my_name:
+			if get_tree().change_scene(my_win_scene) != OK:
+				print ("An unexpected error occured when trying to switch to the "+my_name+" Win UI scene")
 		else:
 			# reiniciamos el tutorial
-			if get_tree().change_scene("res://Scenes/UI/Tutorial/Heroes/pinkyUI.tscn") != OK:
-				print ("An unexpected error occured when trying to switch to the Pinky UI scene")
+			if get_tree().change_scene(my_scene) != OK:
+				print ("An unexpected error occured when trying to switch to the "+my_name+" UI scene")
 	
 	# opcion para salir del juego (tecla escape)
 	if Input.is_action_pressed("ui_cancel"):

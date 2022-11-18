@@ -1,3 +1,167 @@
-[gd_scene format=2]
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://Scenes/Parallax/night_parallax_background.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Heroes/Pink.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Cameras/Camera2D.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/map1/1 Tiles/Tile_51.png" type="Texture" id=4]
+[ext_resource path="res://assets/map1/1 Tiles/Tile_50.png" type="Texture" id=5]
+[ext_resource path="res://Scenes/Heroes/Wooly.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Items/rubber_duck.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/Extras/Contador.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/UI/Tutorial/Heroes/woolyUI.gd" type="Script" id=9]
+
+[sub_resource type="ConvexPolygonShape2D" id=1]
+points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=2]
+points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
+
+[sub_resource type="TileSet" id=3]
+0/name = "Tile_51.png 0"
+0/texture = ExtResource( 4 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 32, 32 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 1 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 1 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+1/name = "Tile_50.png 1"
+1/texture = ExtResource( 5 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 0, 0, 32, 32 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape = SubResource( 2 )
+1/shape_one_way = false
+1/shape_one_way_margin = 1.0
+1/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 2 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+1/z_index = 0
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource( 9 )
+
+[node name="ParallaxBackground" parent="." instance=ExtResource( 1 )]
+scale = Vector2( 0.75, 0.75 )
+transform = Transform2D( 0.75, 0, 0, 0.75, 0, 0 )
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2( 2, 0 )
+tile_set = SubResource( 3 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 327688, 536870912, 0, 327689, 536870913, 0, 327690, 0, 0, 393217, 536870912, 0, 393218, 536870913, 0, 393219, 536870913, 0, 393220, 0, 0, 393229, 536870912, 0, 393230, 536870913, 0, 393231, 536870913, 0, 393232, 536870913, 0, 393233, 536870913, 0, 393234, 0, 0 )
+
+[node name="Limites" type="Node2D" parent="."]
+position = Vector2( 944, 376 )
+
+[node name="PositionDerDown" type="Position2D" parent="Limites"]
+position = Vector2( -525, 6 )
+
+[node name="PositionIzqUp" type="Position2D" parent="Limites"]
+position = Vector2( -954, -360 )
+
+[node name="PositionIzqDown" type="Position2D" parent="Limites"]
+position = Vector2( -946, -1 )
+
+[node name="PositionDerUp" type="Position2D" parent="Limites"]
+position = Vector2( -526, -360 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -1
+follow_viewport_enable = true
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+margin_left = 26.0
+margin_top = 54.0
+margin_right = 326.0
+margin_bottom = 226.0
+grow_horizontal = 2
+grow_vertical = 2
+rect_scale = Vector2( 0.5, 0.5 )
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme_type_variation = "Label2"
+text = "UP to jump
+LEFT and RIGHT to run"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="Label2" type="Label" parent="CanvasLayer"]
+margin_left = 241.0
+margin_top = 68.0
+margin_right = 491.0
+margin_bottom = 170.0
+grow_horizontal = 2
+grow_vertical = 2
+rect_scale = Vector2( 0.5, 0.5 )
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme_type_variation = "Label2"
+text = "Grab this with SHIFT"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="Label3" type="Label" parent="CanvasLayer"]
+margin_left = 417.0
+margin_top = 75.0
+margin_right = 817.0
+margin_bottom = 177.0
+grow_horizontal = 2
+grow_vertical = 2
+rect_scale = Vector2( 0.5, 0.5 )
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme_type_variation = "Label2"
+text = "Hit Pinky with the object with SHIFT"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="HeroesContainer" type="Node2D" parent="."]
+position = Vector2( 194, 154 )
+
+[node name="Wooly" parent="HeroesContainer" instance=ExtResource( 6 )]
+position = Vector2( -93, 6 )
+
+[node name="Camara" parent="HeroesContainer/Wooly" instance=ExtResource( 3 )]
+position = Vector2( -50, -22 )
+rotating = true
+zoom = Vector2( 0.55, 0.55 )
+
+[node name="Pinky" parent="HeroesContainer" instance=ExtResource( 2 )]
+position = Vector2( 400, 7 )
+scale = Vector2( -1, 1 )
+
+[node name="ObjectsContainer" type="Node2D" parent="."]
+
+[node name="RubberDuck" parent="ObjectsContainer" instance=ExtResource( 7 )]
+position = Vector2( 306, 142 )
+
+[node name="Contador" parent="." instance=ExtResource( 8 )]
+offset = Vector2( -1000, 0 )
+transform = Transform2D( 1, 0, 0, 1, -1000, 0 )

@@ -5,9 +5,9 @@
 [ext_resource path="res://resources/theme.tres" type="Theme" id=3]
 [ext_resource path="res://assets/map1/2 Background/Overlay_illumination.png" type="Texture" id=4]
 [ext_resource path="res://assets/map1/2 Background/Night/1.png" type="Texture" id=5]
-[ext_resource path="res://resources/HeroesFaces/Dude_Monster_Throw_4.png" type="Texture" id=6]
-[ext_resource path="res://resources/HeroesFaces/Owlet_Monster_Throw_4.png" type="Texture" id=7]
-[ext_resource path="res://resources/HeroesFaces/Pink_Monster_Run_6.png" type="Texture" id=8]
+[ext_resource path="res://Scenes/Heroes/AnimatedHeroes/AnimatedWooly.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Heroes/AnimatedHeroes/AnimatedPinky.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/Heroes/AnimatedHeroes/AnimatedBluey.tscn" type="PackedScene" id=9]
 
 [sub_resource type="DynamicFont" id=1]
 size = 34
@@ -109,18 +109,19 @@ margin_right = 370.0
 margin_bottom = 283.0
 text = "Map3"
 
-[node name="PinkMonsterRun6" type="Sprite" parent="."]
-position = Vector2( 314, 215.007 )
-scale = Vector2( 0.52, 0.513575 )
-texture = ExtResource( 8 )
+[node name="AnimationsContainer" type="Node2D" parent="."]
 
-[node name="DudeMonsterThrow4" type="Sprite" parent="."]
-position = Vector2( 366, 89.25 )
-scale = Vector2( 0.46, 0.465447 )
-texture = ExtResource( 6 )
-flip_h = true
+[node name="AnimatedBluey" parent="AnimationsContainer" instance=ExtResource( 9 )]
+position = Vector2( 370, 83 )
+rotation = 3.14159
+scale = Vector2( 3.5, -3.5 )
+animation = "throw"
 
-[node name="OwletMonsterThrow4" type="Sprite" parent="."]
-position = Vector2( 62, 134.267 )
-scale = Vector2( 0.53, 0.533937 )
-texture = ExtResource( 7 )
+[node name="AnimatedPinky" parent="AnimationsContainer" instance=ExtResource( 7 )]
+position = Vector2( 343, 209 )
+scale = Vector2( 3.5, 3.5 )
+
+[node name="AnimatedWooly" parent="AnimationsContainer" instance=ExtResource( 6 )]
+position = Vector2( 62, 126 )
+scale = Vector2( 3.5, 3.5 )
+animation = "throw"

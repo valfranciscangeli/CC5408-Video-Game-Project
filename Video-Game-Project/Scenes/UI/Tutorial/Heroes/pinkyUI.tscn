@@ -64,28 +64,15 @@ points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
 script = ExtResource( 9 )
 
 [node name="ParallaxBackground" parent="." instance=ExtResource( 1 )]
+scale = Vector2( 0.75, 0.75 )
+transform = Transform2D( 0.75, 0, 0, 0.75, 0, 0 )
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2( 2, 0 )
 tile_set = SubResource( 3 )
 cell_size = Vector2( 32, 32 )
 format = 1
-tile_data = PoolIntArray( 327688, 536870912, 0, 327689, 536870913, 0, 327690, 0, 0, 393217, 536870912, 0, 393218, 536870913, 0, 393219, 536870913, 0, 393220, 0, 0, 393232, 536870912, 0, 393233, 536870913, 0, 393234, 536870913, 0, 393235, 536870913, 0, 393236, 536870913, 0, 393237, 0, 0, 655359, 536870912, 0, 589824, 536870913, 0, 589825, 536870913, 0, 589826, 536870913, 0, 589827, 536870913, 0, 589828, 536870913, 0, 589829, 536870913, 0, 589830, 536870913, 0, 589831, 536870913, 0, 589832, 536870913, 0, 589833, 536870913, 0, 589834, 536870913, 0, 589835, 536870913, 0, 589836, 536870913, 0, 589837, 0, 0 )
-
-[node name="HeroesContainer" type="Node2D" parent="."]
-position = Vector2( 194, 154 )
-
-[node name="Pinky" parent="HeroesContainer" instance=ExtResource( 2 )]
-position = Vector2( -92, 4 )
-
-[node name="Camara" parent="HeroesContainer/Pinky" instance=ExtResource( 3 )]
-position = Vector2( -49, -9 )
-rotating = true
-zoom = Vector2( 0.65, 0.65 )
-
-[node name="Bluey" parent="HeroesContainer" instance=ExtResource( 6 )]
-position = Vector2( 498, 4 )
-scale = Vector2( -1, 1 )
+tile_data = PoolIntArray( 327688, 536870912, 0, 327689, 536870913, 0, 327690, 0, 0, 393217, 536870912, 0, 393218, 536870913, 0, 393219, 536870913, 0, 393220, 0, 0, 393229, 536870912, 0, 393230, 536870913, 0, 393231, 536870913, 0, 393232, 536870913, 0, 393233, 536870913, 0, 393234, 0, 0 )
 
 [node name="Limites" type="Node2D" parent="."]
 position = Vector2( 944, 376 )
@@ -103,6 +90,7 @@ position = Vector2( -946, -1 )
 position = Vector2( -526, -360 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -1
 follow_viewport_enable = true
 
 [node name="Label" type="Label" parent="CanvasLayer"]
@@ -139,10 +127,10 @@ valign = 1
 autowrap = true
 
 [node name="Label3" type="Label" parent="CanvasLayer"]
-margin_left = 523.0
-margin_top = 82.0
-margin_right = 871.0
-margin_bottom = 184.0
+margin_left = 428.0
+margin_top = 73.0
+margin_right = 776.0
+margin_bottom = 175.0
 grow_horizontal = 2
 grow_vertical = 2
 rect_scale = Vector2( 0.5, 0.5 )
@@ -154,23 +142,20 @@ align = 1
 valign = 1
 autowrap = true
 
-[node name="Label4" type="Label" parent="CanvasLayer"]
-visible = false
-margin_left = 799.0
-margin_top = 138.0
-margin_right = 1179.0
-margin_bottom = 240.0
-grow_horizontal = 2
-grow_vertical = 2
-rect_scale = Vector2( 0.5, 0.5 )
-size_flags_horizontal = 4
-size_flags_vertical = 6
-theme_type_variation = "Label2"
-text = "Bluey died
-You win this level"
-align = 1
-valign = 1
-autowrap = true
+[node name="HeroesContainer" type="Node2D" parent="."]
+position = Vector2( 194, 154 )
+
+[node name="Pinky" parent="HeroesContainer" instance=ExtResource( 2 )]
+position = Vector2( -92, 4 )
+
+[node name="Camara" parent="HeroesContainer/Pinky" instance=ExtResource( 3 )]
+position = Vector2( -50, -26 )
+rotating = true
+zoom = Vector2( 0.65, 0.65 )
+
+[node name="Bluey" parent="HeroesContainer" instance=ExtResource( 6 )]
+position = Vector2( 401, 7 )
+scale = Vector2( -1, 1 )
 
 [node name="ObjectsContainer" type="Node2D" parent="."]
 
@@ -178,4 +163,5 @@ autowrap = true
 position = Vector2( 306, 142 )
 
 [node name="Contador" parent="." instance=ExtResource( 8 )]
-visible = false
+offset = Vector2( -1000, 0 )
+transform = Transform2D( 1, 0, 0, 1, -1000, 0 )

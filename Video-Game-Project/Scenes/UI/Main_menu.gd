@@ -1,9 +1,16 @@
 extends MarginContainer
+
+# ======= buttons =======
 onready var play = $VBoxContainer/Play
 onready var credits = $VBoxContainer/Credits
 onready var exit = $VBoxContainer/Exit
 onready var tutorial = $VBoxContainer/Tutorial
 onready var map3 = $VBoxContainer/Map3
+
+# ====== animations =====
+onready var animated_pinky = $AnimationsContainer/AnimatedPinky
+onready var animated_wooly = $AnimationsContainer/AnimatedWooly
+onready var animated_bluey = $AnimationsContainer/AnimatedBluey
 
 
 func _ready():
@@ -12,6 +19,10 @@ func _ready():
 	credits.connect("pressed",self,"_on_credits_pressed")
 	tutorial.connect("pressed", self, "_on_tutorial_pressed")
 	map3.connect("pressed", self, "_on_map3_pressed")
+	
+	animated_pinky.play("run")
+	animated_wooly.play("throw")
+	animated_bluey.play("throw")
 	
 func _on_exit_pressed():
 	get_tree().quit()
