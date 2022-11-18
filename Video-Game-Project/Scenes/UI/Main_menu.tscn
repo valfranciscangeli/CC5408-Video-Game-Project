@@ -66,61 +66,66 @@ theme = ExtResource( 3 )
 custom_constants/separation = 50
 custom_styles/separator = SubResource( 2 )
 
-[node name="Play" type="Button" parent="VBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer"]
+margin_left = 59.0
 margin_top = 77.0
-margin_right = 370.0
-margin_bottom = 115.0
+margin_right = 306.0
+margin_bottom = 283.0
+
+[node name="Play" type="Button" parent="VBoxContainer/VBoxContainer"]
+margin_right = 247.0
+margin_bottom = 38.0
 size_flags_horizontal = 5
 size_flags_vertical = 5
 toggle_mode = true
 text = "Play"
 icon_align = 1
 
-[node name="Tutorial" type="Button" parent="VBoxContainer"]
-margin_top = 119.0
-margin_right = 370.0
-margin_bottom = 157.0
+[node name="Tutorial" type="Button" parent="VBoxContainer/VBoxContainer"]
+margin_top = 42.0
+margin_right = 247.0
+margin_bottom = 80.0
 size_flags_horizontal = 5
 size_flags_vertical = 5
 toggle_mode = true
 text = "Tutorial"
 icon_align = 1
 
-[node name="Credits" type="Button" parent="VBoxContainer"]
-margin_top = 161.0
-margin_right = 370.0
-margin_bottom = 199.0
+[node name="Credits" type="Button" parent="VBoxContainer/VBoxContainer"]
+margin_top = 84.0
+margin_right = 247.0
+margin_bottom = 122.0
 size_flags_horizontal = 5
 size_flags_vertical = 5
 toggle_mode = true
 text = "Credits"
 
-[node name="Exit" type="Button" parent="VBoxContainer"]
-margin_top = 203.0
-margin_right = 370.0
-margin_bottom = 241.0
+[node name="Exit" type="Button" parent="VBoxContainer/VBoxContainer"]
+margin_top = 126.0
+margin_right = 247.0
+margin_bottom = 164.0
 size_flags_horizontal = 5
 size_flags_vertical = 5
 text = "Exit"
 
-[node name="Map3" type="Button" parent="VBoxContainer"]
-margin_top = 245.0
-margin_right = 370.0
-margin_bottom = 283.0
+[node name="Map3" type="Button" parent="VBoxContainer/VBoxContainer"]
+margin_top = 168.0
+margin_right = 247.0
+margin_bottom = 206.0
 text = "Map3"
 
 [node name="PinkMonsterRun6" type="Sprite" parent="."]
-position = Vector2( 314, 215.007 )
+position = Vector2( 315, 257 )
 scale = Vector2( 0.52, 0.513575 )
 texture = ExtResource( 8 )
 
 [node name="DudeMonsterThrow4" type="Sprite" parent="."]
-position = Vector2( 366, 89.25 )
+position = Vector2( 342, 132 )
 scale = Vector2( 0.46, 0.465447 )
 texture = ExtResource( 6 )
 flip_h = true
 
 [node name="OwletMonsterThrow4" type="Sprite" parent="."]
-position = Vector2( 62, 134.267 )
+position = Vector2( 82, 174 )
 scale = Vector2( 0.53, 0.533937 )
 texture = ExtResource( 7 )
