@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=11 format=2]
+[gd_resource type="Theme" load_steps=12 format=2]
 
 [ext_resource path="res://resources/NicoFontPack-v1.0/Base Font Files/NicoPaint/NicoPaint-Monospaced.woff2" type="DynamicFontData" id=1]
 
@@ -14,6 +14,11 @@ color = Color( 1, 1, 1, 1 )
 grow_begin = -45.0
 grow_end = -45.0
 
+[sub_resource type="DynamicFont" id=10]
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
 [sub_resource type="StyleBoxEmpty" id=5]
 
 [sub_resource type="StyleBoxEmpty" id=6]
@@ -25,7 +30,7 @@ grow_end = -45.0
 [sub_resource type="StyleBoxEmpty" id=9]
 
 [sub_resource type="DynamicFont" id=1]
-size = 32
+size = 31
 outline_size = 2
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 1 )
@@ -52,6 +57,9 @@ MarginContainer/constants/margin_top = 25
 SmallHSeparator/base_type = "HSeparator"
 SmallHSeparator/constants/separation = 20
 SmallHSeparator/styles/separator = SubResource( 3 )
+SmallLabel/base_type = "Label"
+SmallLabel/colors/font_color = Color( 1, 1, 1, 1 )
+SmallLabel/fonts/font = SubResource( 10 )
 VScrollBar/styles/grabber = SubResource( 5 )
 VScrollBar/styles/grabber_highlight = SubResource( 6 )
 VScrollBar/styles/grabber_pressed = SubResource( 7 )

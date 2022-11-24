@@ -5,6 +5,7 @@
 [ext_resource path="res://Scenes/Items/detergent.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/Items/banana.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/Items/meat.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Items/banca_trampolin_level1.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/Heroes/Wooly.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Scenes/day_background.tscn" type="PackedScene" id=18]
 [ext_resource path="res://assets/map1/4 Animated objects/Fountain.png" type="Texture" id=28]
@@ -32,7 +33,6 @@
 [ext_resource path="res://assets/map1/3 Objects/Bushes/13.png" type="Texture" id=69]
 [ext_resource path="res://assets/map1/3 Objects/Bushes/2.png" type="Texture" id=70]
 [ext_resource path="res://assets/map1/3 Objects/Other/Box.png" type="Texture" id=71]
-[ext_resource path="res://assets/map1/3 Objects/Benches/2.png" type="Texture" id=72]
 [ext_resource path="res://assets/map1/3 Objects/Fence/2.png" type="Texture" id=73]
 [ext_resource path="res://assets/map1/3 Objects/Stones/4.png" type="Texture" id=76]
 [ext_resource path="res://assets/map1/4 Animated objects/Chest_open.png" type="Texture" id=80]
@@ -243,10 +243,6 @@ texture = ExtResource( 60 )
 position = Vector2( 680, 290 )
 texture = ExtResource( 64 )
 
-[node name="banca 1" type="Sprite" parent="Decoración"]
-position = Vector2( 674, 294 )
-texture = ExtResource( 72 )
-
 [node name="17" type="Sprite" parent="Decoración"]
 position = Vector2( 625, 301 )
 texture = ExtResource( 57 )
@@ -369,7 +365,7 @@ debug_mode = false
 position = Vector2( 241, 166 )
 
 [node name="Wooly" parent="FollowerCamera" instance=ExtResource( 15 )]
-position = Vector2( 146, 243 )
+position = Vector2( 753, 32 )
 
 [node name="Bluey" parent="FollowerCamera" instance=ExtResource( 93 )]
 position = Vector2( 389, 76 )
@@ -382,3 +378,8 @@ position = Vector2( 2, -24 )
 
 [node name="PositionIzqUp" type="Position2D" parent="Limites"]
 position = Vector2( -1133, -390 )
+
+[node name="ObjetosInteractivos" type="Node2D" parent="."]
+
+[node name="Banca trampolin" parent="ObjetosInteractivos" instance=ExtResource( 6 )]
+position = Vector2( 675, 305 )

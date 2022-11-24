@@ -220,12 +220,6 @@ position = Vector2( 1240, 568 )
 [node name="PositionIzqUp" type="Position2D" parent="Limites"]
 position = Vector2( -16, 16 )
 
-[node name="PositionIzqDown" type="Position2D" parent="Limites"]
-position = Vector2( 0, 576 )
-
-[node name="PositionDerUp" type="Position2D" parent="Limites"]
-position = Vector2( 1248, 0 )
-
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource( 2 )
 cell_size = Vector2( 32, 32 )

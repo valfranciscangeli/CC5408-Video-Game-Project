@@ -35,8 +35,9 @@ onready var playback = anim_tree.get("parameters/playback")
 onready var dust = $Pivot/Dust
 
 # contador items ========
-onready var contador_canvas = "../../Contador"
-onready var my_face = "PinkyFace"
+onready var contador_canvas = "../../Contador/GridContainer"
+onready var my_face = "PinkyFaceButton"
+var color_of_death = '#2f2c2c'
 
 # contador victorias ======
 var my_wins = 0
@@ -89,7 +90,7 @@ func _physics_process(delta):
 	
 	# si pasan del limite del mapa se eliminan de la escena
 	if global_position.y >= inf_der.y:
-		get_node(contador_canvas+"/"+my_face).visible = false # eliminamos su carita de los personajes en mapa
+		get_node(contador_canvas+"/"+my_face).modulate = color_of_death # "apagamos" su carita de los personajes en mapa
 		queue_free() # eliminamos al personaje del mapa
 	
 	dust.visible = is_on_floor() and abs(velocity.x) > 5
