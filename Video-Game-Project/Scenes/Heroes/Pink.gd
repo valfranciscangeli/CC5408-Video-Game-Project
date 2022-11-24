@@ -75,12 +75,16 @@ func _physics_process(delta):
 
 	for i in get_slide_count():
 		var collision = get_slide_collision(i)
-
 		if collision.collider.collision_layer == 12:
 			var object: RigidBody2D = collision.collider 
-			if object.linear_velocity.length() > 3:
+			if object.linear_velocity.length() > 20:
 				var direction = object.linear_velocity.normalized()
-				velocity = direction * SPEED * 3 
+				velocity = direction * SPEED * 4 
+		#codigo que determina el comportamiento de los objetos trampolines 
+		if collision.collider.collision_layer == 16:
+			var object: Node2D = collision.collider
+			var direction = (global_position - object.global_position).normalized()
+			velocity = direction * SPEED * 3
 	#-------------------------------------------------------------------
 	
 	# si pasan del limite del mapa se eliminan de la escena

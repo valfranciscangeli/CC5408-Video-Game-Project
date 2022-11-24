@@ -161,6 +161,7 @@ quit={
 2d_physics/layer_2="players"
 2d_physics/layer_3="objets"
 2d_physics/layer_4="objects_throws"
+2d_physics/layer_5="trampolin_objects "
 
 [physics]
 

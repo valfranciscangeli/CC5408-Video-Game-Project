@@ -3,7 +3,7 @@ onready var collision = get_node("CollisionShape2D")
 onready var picked = false
 onready var SPEED = 200
 var item = null 
-export var velocity_to_throw = 10
+export var velocity_to_throw = 25
 
 # limits ===========
 onready var sup_izq = ($"../../Limites/PositionIzqUp").global_position
@@ -58,7 +58,7 @@ func to_throw_objects(player_name):
 			#activamos capa de colision de objeto lanzado 
 			set_collision_layer_bit(3,true)
 			picked = false
-			linear_velocity.x = 300 * item.scale.x
+			linear_velocity.x = 350 * item.scale.x
 			add_collision_exception_with(b)
 			yield(get_tree().create_timer(0.2), "timeout")
 			remove_collision_exception_with(b)

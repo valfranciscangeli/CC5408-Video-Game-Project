@@ -322,7 +322,7 @@ scale = Vector2( 1, 1.2 )
 z_index = 7
 z_as_relative = false
 frames = SubResource( 57 )
-frame = 3
+frame = 4
 speed_scale = 0.5
 playing = true
 
@@ -331,7 +331,7 @@ position = Vector2( 902, 181 )
 scale = Vector2( 1, 1.2 )
 z_index = 1
 frames = SubResource( 82 )
-frame = 4
+frame = 6
 playing = true
 
 [node name="fountain" type="AnimatedSprite" parent="Decoración"]
@@ -339,7 +339,6 @@ position = Vector2( 609, 262 )
 scale = Vector2( 1, 1.2 )
 z_index = 12
 frames = SubResource( 74 )
-frame = 3
 playing = true
 
 [node name="ThrowableObjects" type="Node2D" parent="."]

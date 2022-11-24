@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/assets jungla/3 Objects/Boxes/2.png" type="Texture" id=1]
+
+[sub_resource type="SegmentShape2D" id=1]
+a = Vector2( -15.94, -5.99946 )
+b = Vector2( -63.7601, -5.99946 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_layer = 16
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 20, -11 )
+scale = Vector2( 0.564616, 1.8335 )
+shape = SubResource( 1 )
+
+[node name="sprite" type="Sprite" parent="StaticBody2D"]
+position = Vector2( -2, -11 )
+texture = ExtResource( 1 )

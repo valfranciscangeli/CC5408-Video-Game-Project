@@ -287,7 +287,7 @@ graph_offset = Vector2( 0, -42.0158 )
 
 [node name="Pinky" type="KinematicBody2D"]
 collision_layer = 2
-collision_mask = 9
+collision_mask = 25
 script = ExtResource( 2 )
 
 [node name="Pivot" type="Node2D" parent="."]
@@ -302,7 +302,7 @@ position = Vector2( 4, 7 )
 [node name="Dust" type="AnimatedSprite" parent="Pivot"]
 position = Vector2( -8, 0 )
 frames = SubResource( 25 )
-frame = 1
+frame = 3
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
