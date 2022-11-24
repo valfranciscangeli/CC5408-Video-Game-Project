@@ -9,5 +9,5 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if Input.is_action_pressed("ui_accept"):
-		if get_tree().change_scene("res://Scenes/Levels/level02.tscn") != OK:
-			print ("An unexpected error occured when trying to switch to the Level02 scene")
+		if get_tree().change_scene("res://Scenes/Levels/Cowboy_level.tscn") != OK:
+			print ("An unexpected error occured when trying to switch to the Cowboy level scene")
