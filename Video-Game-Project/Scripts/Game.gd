@@ -4,10 +4,14 @@ extends Node
 var _pinky_wins = 0
 var _wooly_wins = 0
 var _bluey_wins = 0
+var _objects = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	print("")
+	pass
+	
+func _physics_process(_delta):
+	print("objetos" + str(_objects))
 
 	
 # setters y getters ===============================================
@@ -28,3 +32,12 @@ func get_wooly_wins():
 	
 func get_bluey_wins():
 	return _bluey_wins
+	
+func add_object():
+	_objects += 1
+	
+func sub_object():
+	_objects -= 1
+	
+func get_objects_count():
+	return _objects
