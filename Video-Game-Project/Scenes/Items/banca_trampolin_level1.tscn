@@ -1,10 +1,10 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://assets/map1/3 Objects/Benches/2.png" type="Texture" id=1]
+[ext_resource path="res://assets/map1/3 Objects/Benches/banca con outline.png" type="Texture" id=1]
 
 [sub_resource type="SegmentShape2D" id=1]
-a = Vector2( -15.94, -5.99946 )
-b = Vector2( -63.7601, -5.99946 )
+a = Vector2( -1.77111, -5.45405 )
+b = Vector2( -85.0135, -5.45405 )
 
 [node name="Node2D" type="Node2D"]
 
