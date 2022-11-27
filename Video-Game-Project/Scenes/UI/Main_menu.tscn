@@ -121,14 +121,14 @@ position = Vector2( 361, 88 )
 rotation = 3.14159
 scale = Vector2( 3.5, -3.5 )
 animation = "throw"
-frame = 2
+frame = 1
 
 [node name="AnimatedPinky" parent="AnimationsContainer" instance=ExtResource( 7 )]
 position = Vector2( 343, 215 )
 scale = Vector2( 3.5, 3.5 )
-frame = 4
+frame = 1
 
 [node name="AnimatedWooly" parent="AnimationsContainer" instance=ExtResource( 6 )]
 position = Vector2( 65, 130 )
 scale = Vector2( 3.5, 3.5 )
-frame = 2
+frame = 1
