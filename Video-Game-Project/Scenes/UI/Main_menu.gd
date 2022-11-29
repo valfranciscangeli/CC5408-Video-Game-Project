@@ -7,7 +7,7 @@ onready var play = $VBoxContainer/VBoxContainer/Play
 onready var credits = $VBoxContainer/VBoxContainer/Credits
 onready var exit = $VBoxContainer/VBoxContainer/Exit
 onready var tutorial = $VBoxContainer/VBoxContainer/Tutorial
-onready var map2 = $"VBoxContainer/VBoxContainer/Map 2 (beta)"
+onready var map2 = $"VBoxContainer/VBoxContainer/Map 3 (beta)"
 
 # ====== animations =====
 onready var animated_pinky = $AnimationsContainer/AnimatedPinky

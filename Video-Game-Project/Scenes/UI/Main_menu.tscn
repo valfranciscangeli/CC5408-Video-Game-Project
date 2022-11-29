@@ -108,11 +108,11 @@ size_flags_horizontal = 5
 size_flags_vertical = 5
 text = "Exit"
 
-[node name="Map 2 (beta)" type="Button" parent="VBoxContainer/VBoxContainer"]
+[node name="Map 3 (beta)" type="Button" parent="VBoxContainer/VBoxContainer"]
 margin_top = 168.0
 margin_right = 370.0
 margin_bottom = 206.0
-text = "Map 2 (beta)"
+text = "Map 3 (beta)"
 
 [node name="AnimationsContainer" type="Node2D" parent="."]
 

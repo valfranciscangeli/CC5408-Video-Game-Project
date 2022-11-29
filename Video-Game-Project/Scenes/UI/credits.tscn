@@ -28,8 +28,8 @@ size_flags_horizontal = 7
 size_flags_vertical = 4
 
 [node name="Title" type="Label" parent="ScrollContainer/CreditsContainer"]
-margin_left = 116.0
-margin_right = 256.0
+margin_left = 117.0
+margin_right = 254.0
 margin_bottom = 32.0
 grow_horizontal = 2
 size_flags_horizontal = 6
