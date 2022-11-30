@@ -7,7 +7,6 @@ onready var play = $VBoxContainer/VBoxContainer/Play
 onready var credits = $VBoxContainer/VBoxContainer/Credits
 onready var exit = $VBoxContainer/VBoxContainer/Exit
 onready var tutorial = $VBoxContainer/VBoxContainer/Tutorial
-onready var map2 = $"VBoxContainer/VBoxContainer/Map 3 (beta)"
 
 # ====== animations =====
 onready var animated_pinky = $AnimationsContainer/AnimatedPinky
@@ -20,7 +19,6 @@ func _ready():
 	play.connect("pressed",self,"_on_play_pressed")
 	credits.connect("pressed",self,"_on_credits_pressed")
 	tutorial.connect("pressed", self, "_on_tutorial_pressed")
-	map2.connect("pressed", self, "_on_map3_pressed")
 	
 	animated_pinky.play("run")
 	animated_wooly.play("throw")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=2]
+[gd_scene load_steps=33 format=2]
 
 [ext_resource path="res://assets/tiles/crystal_tileset.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/Levels/level03.gd" type="Script" id=2]
@@ -8,10 +8,6 @@
 [ext_resource path="res://Scenes/Heroes/Bluey.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/Prefabs/Portal.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scenes/Heroes/Wooly.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Scenes/Items/rubber_duck.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Scenes/Items/meat.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Scenes/Items/coffee_bag.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Scenes/Items/banana.tscn" type="PackedScene" id=12]
 
 [sub_resource type="TileSet" id=22]
 0/name = "crystal_tileset.png 0"
@@ -692,6 +688,14 @@ collision_mask = 5
 position = Vector2( 1007, 388 )
 collision_mask = 5
 
+[node name="Portal" parent="." groups=["portales"] instance=ExtResource( 7 )]
+position = Vector2( 240, 391 )
+display = Vector2( 360, 100 )
+
+[node name="Portal2" parent="." groups=["portales"] instance=ExtResource( 7 )]
+position = Vector2( 1170, 470 )
+display = Vector2( 1025, 90 )
+
 [node name="Limites" type="Node2D" parent="."]
 position = Vector2( 1146, 391 )
 
@@ -701,44 +705,15 @@ position = Vector2( 197, 115 )
 [node name="PositionIzqUp" type="Position2D" parent="Limites"]
 position = Vector2( -1146, -384 )
 
-[node name="Portal" parent="." groups=["portales"] instance=ExtResource( 7 )]
-position = Vector2( 240, 391 )
-display = Vector2( 360, 100 )
+[node name="ThrowableObjects" type="Node2D" parent="."]
 
-[node name="Portal2" parent="." groups=["portales"] instance=ExtResource( 7 )]
-position = Vector2( 1170, 470 )
-display = Vector2( 1025, 90 )
+[node name="ObjectsPosition" type="Node2D" parent="."]
 
-[node name="ObjectsContainer" type="Node2D" parent="."]
+[node name="Obj1" type="Position2D" parent="ObjectsPosition"]
+position = Vector2( 564, 342 )
 
-[node name="Throwable_objects" type="Node2D" parent="."]
+[node name="Obj2" type="Position2D" parent="ObjectsPosition"]
+position = Vector2( 736, 153 )
 
-[node name="Banana" parent="Throwable_objects" instance=ExtResource( 12 )]
-position = Vector2( 280, -112 )
-
-[node name="CoffeeBag" parent="Throwable_objects" instance=ExtResource( 11 )]
-position = Vector2( 360, -104 )
-
-[node name="RubberDuck" parent="Throwable_objects" instance=ExtResource( 9 )]
-position = Vector2( 632, -112 )
-
-[node name="Meat" parent="Throwable_objects" instance=ExtResource( 10 )]
-position = Vector2( 688, -112 )
-
-[node name="CoffeeBag2" parent="Throwable_objects" instance=ExtResource( 11 )]
-position = Vector2( 1024, -104 )
-
-[node name="CoffeeBag3" parent="Throwable_objects" instance=ExtResource( 11 )]
-position = Vector2( 1080, -104 )
-
-[node name="RubberDuck2" parent="Throwable_objects" instance=ExtResource( 9 )]
-position = Vector2( 672, 152 )
-
-[node name="Banana2" parent="Throwable_objects" instance=ExtResource( 12 )]
-position = Vector2( 48, 408 )
-
-[node name="Banana3" parent="Throwable_objects" instance=ExtResource( 12 )]
-position = Vector2( 944, 440 )
-
-[node name="Banana4" parent="Throwable_objects" instance=ExtResource( 12 )]
-position = Vector2( 712, 312 )
+[node name="Obj3" type="Position2D" parent="ObjectsPosition"]
+position = Vector2( 964, 372 )

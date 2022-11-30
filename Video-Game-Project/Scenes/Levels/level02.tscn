@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Scenes/Cameras/follower_camera.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Levels/level02.gd" type="Script" id=2]
@@ -13,10 +13,6 @@
 [ext_resource path="res://assets/assets jungla/3 Objects/Trees/1.png" type="Texture" id=11]
 [ext_resource path="res://assets/assets jungla/3 Objects/Willows/3.png" type="Texture" id=12]
 [ext_resource path="res://Scenes/Items/trampolin_crate.tscn" type="PackedScene" id=13]
-[ext_resource path="res://Scenes/Items/meat.tscn" type="PackedScene" id=14]
-[ext_resource path="res://Scenes/Items/rubber_duck.tscn" type="PackedScene" id=15]
-[ext_resource path="res://Scenes/Items/banana.tscn" type="PackedScene" id=16]
-[ext_resource path="res://Scenes/Items/coffee_bag.tscn" type="PackedScene" id=17]
 
 [sub_resource type="ConvexPolygonShape2D" id=7]
 points = PoolVector2Array( 144, 48, 0, 48, 32, 0, 80, 0 )
@@ -195,11 +191,9 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 script = ExtResource( 2 )
 
 [node name="back_ground" parent="." instance=ExtResource( 10 )]
-visible = false
 position = Vector2( 216, -24 )
 
 [node name="FollowerCamera" parent="." instance=ExtResource( 1 )]
-visible = false
 debug_mode = false
 
 [node name="Pinky" parent="FollowerCamera" instance=ExtResource( 5 )]
@@ -212,11 +206,9 @@ position = Vector2( 880, 96 )
 position = Vector2( 456, 112 )
 
 [node name="Contador" parent="." instance=ExtResource( 6 )]
-visible = false
 follow_viewport_enable = false
 
 [node name="Limites" type="Node2D" parent="."]
-visible = false
 
 [node name="PositionDerDown" type="Position2D" parent="Limites"]
 position = Vector2( 1240, 568 )
@@ -225,14 +217,12 @@ position = Vector2( 1240, 568 )
 position = Vector2( -16, 16 )
 
 [node name="TileMap" type="TileMap" parent="."]
-visible = false
 tile_set = SubResource( 2 )
 cell_size = Vector2( 32, 32 )
 format = 1
 tile_data = PoolIntArray( -196600, 8, 0, -196599, 8, 0, -196598, 8, 0, -196597, 8, 0, -196589, 8, 0, -196588, 8, 0, -196587, 8, 0, -196577, 8, 0, -196576, 8, 0, -196575, 8, 0, -196574, 8, 0, 131101, 8, 0, 196614, 8, 0, 196625, 8, 0, 262145, 8, 0, 262146, 8, 0, 262147, 8, 0, 262148, 8, 0, 262156, 8, 0, 262157, 8, 0, 262158, 8, 0, 262159, 8, 0, 262170, 8, 0, 262171, 8, 0, 262172, 8, 0, 262173, 8, 0, 327699, 10, 0, 458769, 8, 0, 524300, 10, 0, 655360, 8, 0, 655361, 8, 0, 655362, 8, 0, 655363, 8, 0, 655367, 8, 0, 655368, 8, 0, 655369, 8, 0, 655370, 8, 0, 655371, 8, 0, 655378, 8, 0, 655379, 8, 0, 655380, 8, 0, 655381, 8, 0, 655382, 8, 0, 655383, 8, 0, 655392, 8, 0, 655393, 8, 0, 655394, 8, 0, 655395, 8, 0, 720902, 8, 0, 720913, 8, 0, 720927, 8, 0, 851968, 8, 0, 851969, 8, 0, 851970, 8, 0, 851971, 8, 0, 851975, 8, 0, 851976, 8, 0, 851977, 8, 0, 851978, 8, 0, 851979, 8, 0, 851980, 8, 0, 851981, 8, 0, 851982, 8, 0, 851983, 8, 0, 917504, 9, 0, 917505, 9, 0, 917506, 9, 0, 917507, 9, 0, 917508, 9, 0, 917510, 9, 0, 917511, 9, 0, 917512, 9, 0, 917513, 9, 0, 917514, 9, 0, 917515, 9, 0, 917516, 9, 0, 917517, 9, 0, 917518, 9, 0, 917519, 9, 0, 917520, 8, 0, 917522, 8, 0, 917523, 8, 0, 917524, 8, 0, 917525, 8, 0, 917526, 8, 0, 917527, 8, 0, 917528, 8, 0, 917530, 8, 0, 917531, 8, 0, 917532, 8, 0, 917533, 8, 0, 917534, 8, 0, 917535, 8, 0, 917536, 8, 0, 917537, 8, 0 )
 
 [node name="Trampolines" type="Node2D" parent="."]
-visible = false
 
 [node name="Trampolin_1" parent="Trampolines" instance=ExtResource( 13 )]
 position = Vector2( 288, 320 )
@@ -249,36 +239,35 @@ position = Vector2( 560, 96 )
 [node name="trampolin_5" parent="Trampolines" instance=ExtResource( 13 )]
 position = Vector2( 944, 64 )
 
-[node name="Throwable_objects" type="Node2D" parent="."]
-
-[node name="Banana" parent="Throwable_objects" instance=ExtResource( 16 )]
-position = Vector2( 280, -112 )
-
-[node name="CoffeeBag" parent="Throwable_objects" instance=ExtResource( 17 )]
-position = Vector2( 360, -104 )
-
-[node name="RubberDuck" parent="Throwable_objects" instance=ExtResource( 15 )]
-position = Vector2( 632, -112 )
-
-[node name="Meat" parent="Throwable_objects" instance=ExtResource( 14 )]
-position = Vector2( 688, -112 )
-
-[node name="CoffeeBag2" parent="Throwable_objects" instance=ExtResource( 17 )]
-position = Vector2( 1024, -104 )
-
-[node name="CoffeeBag3" parent="Throwable_objects" instance=ExtResource( 17 )]
-position = Vector2( 1080, -104 )
-
-[node name="RubberDuck2" parent="Throwable_objects" instance=ExtResource( 15 )]
-position = Vector2( 672, 152 )
-
-[node name="Banana2" parent="Throwable_objects" instance=ExtResource( 16 )]
-position = Vector2( 48, 408 )
-
-[node name="Banana3" parent="Throwable_objects" instance=ExtResource( 16 )]
-position = Vector2( 944, 440 )
-
-[node name="Banana4" parent="Throwable_objects" instance=ExtResource( 16 )]
-position = Vector2( 712, 312 )
+[node name="ThrowableObjects" type="Node2D" parent="."]
 
 [node name="ObjectsPosition" type="Node2D" parent="."]
+
+[node name="Obj1" type="Position2D" parent="ObjectsPosition"]
+position = Vector2( 280, -112 )
+
+[node name="Obj2" type="Position2D" parent="ObjectsPosition"]
+position = Vector2( 360, -104 )
+
+[node name="Obj3" type="Position2D" parent="ObjectsPosition"]
+
+[node name="Obj4" type="Position2D" parent="ObjectsPosition"]
+position = Vector2( 688, -112 )
+
+[node name="Obj5" type="Position2D" parent="ObjectsPosition"]
+position = Vector2( 1024, -104 )
+
+[node name="Obj6" type="Position2D" parent="ObjectsPosition"]
+position = Vector2( 1080, -104 )
+
+[node name="Obj7" type="Position2D" parent="ObjectsPosition"]
+position = Vector2( 672, 152 )
+
+[node name="Obj8" type="Position2D" parent="ObjectsPosition"]
+position = Vector2( 48, 408 )
+
+[node name="Obj9" type="Position2D" parent="ObjectsPosition"]
+position = Vector2( 944, 440 )
+
+[node name="Obj10" type="Position2D" parent="ObjectsPosition"]
+position = Vector2( 712, 312 )

@@ -1,10 +1,6 @@
-[gd_scene load_steps=64 format=2]
+[gd_scene load_steps=60 format=2]
 
 [ext_resource path="res://Scenes/Auxiliar Scenes/TileMap.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Scenes/Items/coffee_bag.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Scenes/Items/detergent.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Scenes/Items/banana.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Scenes/Items/meat.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/Items/trampolin_banca.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/Items/trampolin_box.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scenes/Heroes/Wooly.tscn" type="PackedScene" id=15]
@@ -330,21 +326,6 @@ playing = true
 
 [node name="ThrowableObjects" type="Node2D" parent="."]
 
-[node name="Banana" parent="ThrowableObjects" instance=ExtResource( 4 )]
-position = Vector2( 217, 272 )
-
-[node name="CoffeeBag" parent="ThrowableObjects" instance=ExtResource( 2 )]
-position = Vector2( 214, 163 )
-
-[node name="Detergent" parent="ThrowableObjects" instance=ExtResource( 3 )]
-position = Vector2( 472, 295 )
-
-[node name="Detergent2" parent="ThrowableObjects" instance=ExtResource( 3 )]
-position = Vector2( 60, 85 )
-
-[node name="Meat" parent="ThrowableObjects" instance=ExtResource( 5 )]
-position = Vector2( 417, 118 )
-
 [node name="Contador" parent="." instance=ExtResource( 95 )]
 follow_viewport_enable = false
 
@@ -381,3 +362,29 @@ scale = Vector2( -1, 1 )
 
 [node name="Node2D" parent="ObjetosInteractivos" instance=ExtResource( 7 )]
 position = Vector2( 770, 130 )
+
+[node name="ObjectsPosition" type="Node2D" parent="."]
+
+[node name="Obj1" type="Position2D" parent="ObjectsPosition"]
+position = Vector2( 217, 272 )
+
+[node name="Obj2" type="Position2D" parent="ObjectsPosition"]
+position = Vector2( 214, 163 )
+
+[node name="Obj3" type="Position2D" parent="ObjectsPosition"]
+position = Vector2( 472, 295 )
+
+[node name="Obj4" type="Position2D" parent="ObjectsPosition"]
+position = Vector2( 60, 85 )
+
+[node name="Obj5" type="Position2D" parent="ObjectsPosition"]
+position = Vector2( 417, 118 )
+
+[node name="Obj6" type="Position2D" parent="ObjectsPosition"]
+position = Vector2( 848, 158 )
+
+[node name="Obj7" type="Position2D" parent="ObjectsPosition"]
+position = Vector2( 751, 289 )
+
+[node name="Obj8" type="Position2D" parent="ObjectsPosition"]
+position = Vector2( 979, 247 )

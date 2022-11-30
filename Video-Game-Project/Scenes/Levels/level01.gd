@@ -1,5 +1,7 @@
 extends Node2D
 onready var camara = $FollowerCamera
+onready var objetos = $ThrowableObjects
+onready var posicion_objetos = $ObjectsPosition
 var next_level = 'level 02'
 
 
@@ -26,7 +28,9 @@ func _process(_delta):
 		
 		Game.set_current_level(next_level)
 		
-	
+	if objetos.get_child_count() == 0:
+		respawn_objetos()
+		
 	# inputs de manejo del juego =========================
 	
 	# opcion para salir del juego (ESC)
@@ -43,3 +47,15 @@ func _process(_delta):
 		if get_tree().change_scene("res://Scenes/UI/Main_menu.tscn") != OK:
 			print ("An unexpected error occured when trying to switch to the Main Menu scene")
 
+func respawn_objetos():
+	var cantidad = posicion_objetos.get_child_count()
+	var nuevos_objetos = []
+	for _i in range(cantidad):
+		var nuevo_objeto = Game.get_random_object()
+		nuevo_objeto = nuevo_objeto.instance()
+		nuevos_objetos.append(nuevo_objeto)
+	var contador = 0
+	for posicion in posicion_objetos.get_children():
+		nuevos_objetos[contador].position = posicion.position
+		objetos.add_child(nuevos_objetos[contador])
+		contador+=1

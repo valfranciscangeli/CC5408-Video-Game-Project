@@ -7,18 +7,18 @@ var _bluey_wins = 0
 var _objects = 0
 
 # ================= niveles ============== :
-var levels = {'level 01':"res://Scenes/Levels/level01.tscn",
+var levels = {'level 01': "res://Scenes/Levels/level01.tscn",
 				'level 02': "res://Scenes/Levels/level02.tscn",
 				'level 03': "res://Scenes/Levels/level03.tscn"}
 
 var current_level = 'level 01'
 
 # ================= objetos ============== :
-var objects = {'banana': "res://Scenes/Items/banana.tscn",
-				'coffe bag': "res://Scenes/Items/coffee_bag.tscn",
-				'detergent': "res://Scenes/Items/detergent.tscn",
-				'meat': "res://Scenes/Items/meat.tscn", 
-				'rubber duck': "res://Scenes/Items/rubber_duck.tscn"}
+var objects = {'banana': preload("res://Scenes/Items/banana.tscn"),
+				'coffe bag': preload("res://Scenes/Items/coffee_bag.tscn"),
+				'detergent': preload("res://Scenes/Items/detergent.tscn"),
+				'meat': preload("res://Scenes/Items/meat.tscn"), 
+				'rubber duck': preload("res://Scenes/Items/rubber_duck.tscn")}
 
 # setters y getters ===============================================
 func add_pinky_wins():
@@ -55,4 +55,7 @@ func get_current_level_path():
 	return levels[current_level]
 	
 func get_random_object():
-	pass
+	var objetos = objects.keys()
+	var objeto = objetos[randi() % objetos.size()]
+	objeto = objects[objeto]
+	return objeto
