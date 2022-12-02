@@ -1,13 +1,14 @@
 extends Camera2D
 
-export(float, 0.1, 0.5) var zoom_offset : float = 0.2
-export var debug_mode : bool = false
+export(float, 0.1, 0.7) var zoom_offset : float = 0.4
+export var debug_mode : bool = true 
 
 var camera_rect : = Rect2(0, 0, 0, 0)
 var viewport_rect : = Rect2()
 
-var min_width = 0
-var min_height = 0
+var escala = 0.5
+var min_width = 420 * escala
+var min_height = 300 *escala
 
 onready var sup_izq = ($"../Limites/PositionIzqUp").global_position
 onready var inf_der = ($"../Limites/PositionDerDown").global_position
@@ -33,10 +34,10 @@ func _physics_process(_delta: float) -> void:
 			var pos = camera_rect.position
 			var end = camera_rect.end
 			
-			pos.x = clamp (pos.x,  sup_izq.x + min_width, inf_der.x + min_width)
-			pos.x = clamp (pos.y,  sup_izq.y + min_height, inf_der.y + min_height)
-			end.x = clamp (end.x,  sup_izq.x - min_width, inf_der.x - min_width)
-			end.y = clamp (end.y,  sup_izq.y - min_height, inf_der.y - min_height)
+			pos.x = clamp (pos.x,  sup_izq.x , inf_der.x - min_width)
+			pos.x = clamp (pos.y,  sup_izq.y , inf_der.y - min_height)
+			end.x = clamp (end.x,  sup_izq.x + min_width, inf_der.x)
+			end.y = clamp (end.y,  sup_izq.y + min_height, inf_der.y)
 			
 			camera_rect = Rect2(pos, end-pos)
 	

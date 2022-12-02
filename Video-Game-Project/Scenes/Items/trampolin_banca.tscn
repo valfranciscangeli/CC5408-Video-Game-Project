@@ -6,7 +6,7 @@
 a = Vector2( -1.77111, -5.45405 )
 b = Vector2( -85.0135, -5.45405 )
 
-[node name="Node2D" type="Node2D"]
+[node name="Banca trampolin" type="Node2D"]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 collision_layer = 16
