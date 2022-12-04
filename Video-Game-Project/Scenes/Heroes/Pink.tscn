@@ -1,10 +1,14 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=35 format=2]
 
 [ext_resource path="res://assets/heroes/1 Pink_Monster/Pink_Monster_Idle_4.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/Heroes/Pink.gd" type="Script" id=2]
 [ext_resource path="res://assets/heroes/1 Pink_Monster/Pink_Monster_Jump_8.png" type="Texture" id=3]
 [ext_resource path="res://assets/heroes/1 Pink_Monster/Walk_Run_Push_Dust_6.png" type="Texture" id=4]
 [ext_resource path="res://assets/heroes/1 Pink_Monster/Pink_Monster_Run_6.png" type="Texture" id=5]
+[ext_resource path="res://assets/sound effects/Bubble 1.wav" type="AudioStream" id=6]
+[ext_resource path="res://assets/sound effects/trampolin.wav" type="AudioStream" id=7]
+[ext_resource path="res://assets/sound effects/collision_sound.wav" type="AudioStream" id=8]
+[ext_resource path="res://assets/sound effects/caida.wav" type="AudioStream" id=9]
 
 [sub_resource type="AtlasTexture" id=19]
 atlas = ExtResource( 4 )
@@ -287,7 +291,7 @@ graph_offset = Vector2( 0, -42.0158 )
 
 [node name="Pinky" type="KinematicBody2D"]
 collision_layer = 2
-collision_mask = 25
+collision_mask = 153
 script = ExtResource( 2 )
 
 [node name="Pivot" type="Node2D" parent="."]
@@ -302,7 +306,7 @@ position = Vector2( 4, 7 )
 [node name="Dust" type="AnimatedSprite" parent="Pivot"]
 position = Vector2( -8, 0 )
 frames = SubResource( 25 )
-frame = 4
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -321,3 +325,17 @@ anims/run = SubResource( 4 )
 tree_root = SubResource( 9 )
 anim_player = NodePath("../AnimationPlayer")
 parameters/playback = SubResource( 10 )
+
+[node name="SFX" type="Node2D" parent="."]
+
+[node name="jump" type="AudioStreamPlayer2D" parent="SFX"]
+stream = ExtResource( 6 )
+
+[node name="trampolin" type="AudioStreamPlayer2D" parent="SFX"]
+stream = ExtResource( 7 )
+
+[node name="collision" type="AudioStreamPlayer2D" parent="SFX"]
+stream = ExtResource( 8 )
+
+[node name="caida" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource( 9 )

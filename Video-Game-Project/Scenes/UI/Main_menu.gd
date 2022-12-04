@@ -13,6 +13,9 @@ onready var animated_pinky = $AnimationsContainer/AnimatedPinky
 onready var animated_wooly = $AnimationsContainer/AnimatedWooly
 onready var animated_bluey = $AnimationsContainer/AnimatedBluey
 
+#== 
+
+
 
 func _ready():
 	exit.connect("pressed",self,"_on_exit_pressed")
@@ -23,6 +26,8 @@ func _ready():
 	animated_pinky.play("run")
 	animated_wooly.play("throw")
 	animated_bluey.play("throw")
+
+	
 	
 func _on_exit_pressed():
 	get_tree().quit()

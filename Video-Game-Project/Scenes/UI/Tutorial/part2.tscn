@@ -58,15 +58,15 @@ margin_bottom = 151.0
 theme_type_variation = "SmallHSeparator"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer2"]
-margin_left = 5.0
+margin_left = 7.0
 margin_top = 155.0
-margin_right = 365.0
+margin_right = 363.0
 margin_bottom = 197.0
 size_flags_horizontal = 4
 size_flags_vertical = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer2/VBoxContainer"]
-margin_right = 360.0
+margin_right = 356.0
 margin_bottom = 38.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -86,25 +86,25 @@ margin_bottom = 38.0
 
 [node name="Wooly" type="Button" parent="VBoxContainer2/VBoxContainer/HBoxContainer"]
 margin_left = 124.0
-margin_right = 236.0
+margin_right = 233.0
 margin_bottom = 38.0
 text = "Wooly"
 
 [node name="VSeparator2" type="VSeparator" parent="VBoxContainer2/VBoxContainer/HBoxContainer"]
-margin_left = 240.0
-margin_right = 244.0
+margin_left = 237.0
+margin_right = 241.0
 margin_bottom = 38.0
 
 [node name="Bluey" type="Button" parent="VBoxContainer2/VBoxContainer/HBoxContainer"]
-margin_left = 248.0
-margin_right = 360.0
+margin_left = 245.0
+margin_right = 356.0
 margin_bottom = 38.0
 text = "Bluey"
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer2/VBoxContainer"]
-margin_left = 180.0
+margin_left = 178.0
 margin_top = 42.0
-margin_right = 180.0
+margin_right = 178.0
 margin_bottom = 42.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -112,11 +112,13 @@ alignment = 1
 
 [node name="AnimatedPinky" parent="VBoxContainer2/VBoxContainer/HBoxContainer2" instance=ExtResource( 3 )]
 animation = "run"
+frame = 4
 
 [node name="AnimatedWooly" parent="VBoxContainer2/VBoxContainer/HBoxContainer2" instance=ExtResource( 4 )]
 position = Vector2( 3, 30 )
-animation = "throw"
+frame = 2
 
 [node name="AnimatedBluey" parent="VBoxContainer2/VBoxContainer/HBoxContainer2" instance=ExtResource( 5 )]
 position = Vector2( 123, 28 )
 animation = "throw"
+frame = 2

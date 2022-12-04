@@ -12,7 +12,7 @@ func _ready():
 	jump_action = "jump2"
 	pick_action = "pick2"
 	my_face = "WoolyFaceButton"
-
+	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):

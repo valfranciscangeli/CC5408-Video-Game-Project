@@ -41,7 +41,11 @@ var color_of_death = '#2f2c2c'
 
 # contador victorias ======
 var my_wins = 0
-
+# SFX =================
+onready var jump_sfx = $SFX/jump
+onready var trampolin_sfx = $SFX/trampolin
+onready var collision_sfx = $SFX/collision
+onready var caida_sfx = $SFX/caida
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	anim_tree.active = true
@@ -73,26 +77,30 @@ func _physics_process(delta):
 	if (is_on_floor() or airborn_time <= COYOTE_TIME) and Input.is_action_just_pressed(jump_action):
 		velocity.y = -JUMP_SPEED
 		airborn_time = COYOTE_TIME
+		jump_sfx.play()
+		
 
 	for i in get_slide_count():
 		var collision = get_slide_collision(i)
+		print(collision.collider.collision_layer)
 		if collision.collider.collision_layer == 12:
 			var object: RigidBody2D = collision.collider 
 			if object.linear_velocity.length() > 20:
 				var direction = object.linear_velocity.normalized()
 				velocity = direction * SPEED * 4 
+				collision_sfx.play()
 		#codigo que determina el comportamiento de los objetos trampolines 
 		if collision.collider.collision_layer == 16:
 			var object: Node2D = collision.collider
 			var direction = (global_position - object.global_position).normalized()
 			velocity = direction * SPEED * 3
+			trampolin_sfx.play()
 	#-------------------------------------------------------------------
-	
 	# si pasan del limite del mapa se eliminan de la escena
 	if global_position.y >= inf_der.y:
+		caida_sfx.play()
 		get_node(contador_canvas+"/"+my_face).modulate = color_of_death # "apagamos" su carita de los personajes en mapa
 		queue_free() # eliminamos al personaje del mapa
-	
 	dust.visible = is_on_floor() and abs(velocity.x) > 5
 	
 	# Animations
@@ -106,11 +114,11 @@ func _physics_process(delta):
 		
 	if abs(velocity.x) > 0 and is_on_floor():
 		playback.travel("run")
-		
 	elif abs(velocity.x) == 0 and is_on_floor():
 		playback.travel("idle")
 	elif velocity.y < 0:
 		playback.travel("Jump_up")
+		
 	else:
 		playback.travel("jump_down")
 		

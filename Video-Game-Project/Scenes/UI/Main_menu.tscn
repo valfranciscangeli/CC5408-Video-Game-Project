@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://resources/NicoFontPack-v1.0/Base Font Files/NicoBold/NicoBold-Monospaced.woff2" type="DynamicFontData" id=1]
 [ext_resource path="res://Scenes/UI/Main_menu.gd" type="Script" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://assets/map1/2 Background/Night/1.png" type="Texture" id=5]
 [ext_resource path="res://Scenes/Heroes/AnimatedHeroes/AnimatedWooly.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/Heroes/AnimatedHeroes/AnimatedPinky.tscn" type="PackedScene" id=7]
+[ext_resource path="res://assets/sound effects/Intro Theme.mp3" type="AudioStream" id=8]
 [ext_resource path="res://Scenes/Heroes/AnimatedHeroes/AnimatedBluey.tscn" type="PackedScene" id=9]
 
 [sub_resource type="DynamicFont" id=1]
@@ -26,6 +27,11 @@ script = ExtResource( 2 )
 __meta__ = {
 "_edit_horizontal_guides_": [ -20.0 ]
 }
+
+[node name="intro_theme" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+volume_db = -8.0
+autoplay = true
 
 [node name="Background" type="Sprite" parent="."]
 position = Vector2( 225, 140 )
@@ -115,14 +121,15 @@ position = Vector2( 362, 87 )
 rotation = 3.14159
 scale = Vector2( 3.5, -3.5 )
 animation = "throw"
-frame = 1
+frame = 2
+playing = false
 
 [node name="AnimatedPinky" parent="AnimationsContainer" instance=ExtResource( 7 )]
 position = Vector2( 342, 207 )
 scale = Vector2( 3.5, 3.5 )
-frame = 1
+frame = 3
 
 [node name="AnimatedWooly" parent="AnimationsContainer" instance=ExtResource( 6 )]
 position = Vector2( 65, 126 )
 scale = Vector2( 3.5, 3.5 )
-frame = 1
+frame = 3
