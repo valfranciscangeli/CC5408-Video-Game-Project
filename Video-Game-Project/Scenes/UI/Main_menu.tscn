@@ -121,9 +121,8 @@ playing = false
 [node name="AnimatedPinky" parent="AnimationsContainer" instance=ExtResource( 7 )]
 position = Vector2( 342, 207 )
 scale = Vector2( 3.5, 3.5 )
-frame = 5
 
 [node name="AnimatedWooly" parent="AnimationsContainer" instance=ExtResource( 6 )]
 position = Vector2( 65, 126 )
 scale = Vector2( 3.5, 3.5 )
-frame = 3
+frame = 2
