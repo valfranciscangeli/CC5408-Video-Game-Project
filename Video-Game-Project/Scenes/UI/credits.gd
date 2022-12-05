@@ -8,21 +8,19 @@ onready var credits_container = $ScrollContainer/CreditsContainer
 var scroll_ended = false
 
 var credits = [
-	{ "level": "01", "credits": [
+	{ "level": " Level 01", "credits": [
 		{
 			"name": "Free Green Zone Tileset Pixel Art",
 			"author": "free-game-assets.itch.io"
 		},
-		{
-			"name": "Pixel Mart",
-			"author": "ghostpixxells.itch.io"
-		},
-#		{
-#			"name": "Crafting Materials",
-#			"author": "beast-pixels.itch.io"
-#		}
 	]},
-#	{"level": "02", "credits": [
+	{"level": "Level 02", "credits": [
+		{
+			"name": "Free Swamp 2D Tileset Pixel Art",
+			"author": "free-game-assets.itch.io"
+		}
+	 ]},
+#{"level": "Level 03", "credits": [
 #		{
 #			"name": "DOS-88 Synthwave Music Library",
 #			"author": "dos88.itch.io"
@@ -36,6 +34,26 @@ var credits = [
 #			"author": "beast-pixels.itch.io"
 #		}
 #	 ]},
+{"level": "Objects", "credits":[
+		{
+			"name": "Pixel Mart",
+			"author": "ghostpixxells.itch.io"
+		}
+]},
+{"level": "Music", "credits": [
+		{
+			"name": "Victory!",
+			"author": "opengameart.org/users/jkfite01"
+		},
+		{
+			"name": "Platformer Game Music Pack",
+			"author": "opengameart.org/users/codemanu"
+		},
+		{
+			"name": "8-bit / 16-bit Sound Effects (x25) Pack",
+			"author": "jdwasabi.itch.io"
+		}		
+	 ]},
 ]
 
 func _ready():
@@ -62,7 +80,7 @@ func _ready():
 
 	scroll_container.scroll_vertical = 0
 	set_physics_process(false)
-	yield(get_tree().create_timer(1.2), "timeout")
+	yield(get_tree().create_timer(1.1), "timeout")
 	set_physics_process(true)
 
 
@@ -76,7 +94,7 @@ func _physics_process(_delta):
 
 func _create_label_level(text) -> Label:
 	var label = Label.new()
-	label.text = "Level " + text
+	label.text = text
 	label.align = Label.ALIGN_CENTER
 	label.uppercase = true
 	label.autowrap = true

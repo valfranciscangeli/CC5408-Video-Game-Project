@@ -7,4 +7,4 @@ current = true
 editor_draw_limits = true
 editor_draw_drag_margin = true
 script = ExtResource( 1 )
-debug_mode = true
+debug_mode = false

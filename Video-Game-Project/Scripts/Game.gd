@@ -59,3 +59,8 @@ func get_random_object():
 	var objeto = objetos[randi() % objetos.size()]
 	objeto = objects[objeto]
 	return objeto
+
+func reset_wins():
+	_pinky_wins = 0
+	_bluey_wins=0
+	_wooly_wins=0

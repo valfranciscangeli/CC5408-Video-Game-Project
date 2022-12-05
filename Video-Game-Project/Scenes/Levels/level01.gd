@@ -9,21 +9,23 @@ var next_level = 'level 02'
 func _process(_delta):
 	if camara.get_child_count() == 1:
 		var hijo = camara.get_child(0).name
+		
 		if hijo == "Pinky":
 			print ("Pinky gana!!")
 			Game.add_pinky_wins()
-#			pinky_wins_scene()
-			if get_tree().change_scene("res://Scenes/Wins/Pinky_won_level.tscn") != OK:
+			if get_tree().change_scene("res://Scenes/Wins/Level/Pinky_won_level.tscn") != OK:
 				print ("An unexpected error occured when trying to switch to the Pinky Won scene")
+				
 		elif hijo == "Wooly":
 			print ("Wooly gana!!")
 			Game.add_wooly_wins()
-			if get_tree().change_scene("res://Scenes/Wins/Wooly_won_level.tscn") != OK:
+			if get_tree().change_scene("res://Scenes/Wins/Level/Wooly_won_level.tscn") != OK:
 				print ("An unexpected error occured when trying to switch to the Pinky Won scene")
+				
 		elif hijo == "Bluey":
 			print ("Bluey gana!!")
 			Game.add_bluey_wins()
-			if get_tree().change_scene("res://Scenes/Wins/Bluey_won_level.tscn") != OK:
+			if get_tree().change_scene("res://Scenes/Wins/Level/Bluey_won_level.tscn") != OK:
 				print ("An unexpected error occured when trying to switch to the Pinky Won scene")
 		
 		Game.set_current_level(next_level)

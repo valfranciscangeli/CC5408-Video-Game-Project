@@ -38,5 +38,5 @@ func _on_wooly_pressed():
 		print ("An unexpected error occured when trying to switch to the Wooly UI scene")
 	
 func _on_bluey_pressed():
-	if get_tree().change_scene("res://Scenes/UI/Tutorial/Heroes/blueyUI.tscn") != OK:
-		print ("An unexpected error occured when trying to switch to the Bluey UI scene")
+	if get_tree().change_scene("res://Scenes/UI/Tutorial/blueyUI_select.tscn") != OK:
+		print ("An unexpected error occured when trying to switch to the Bluey UI select scene")
