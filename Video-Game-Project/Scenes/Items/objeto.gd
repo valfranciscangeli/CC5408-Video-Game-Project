@@ -30,7 +30,6 @@ func _physics_process(_delta):
 			
 #	# si pasan del limite del mapa se eliminan de la escena
 	if global_position.y >= inf_der.y:
-		print ('soy un objeto y me cai A')
 		Game.sub_object()
 		queue_free() # eliminamos al objeto del mapa
 
@@ -74,17 +73,8 @@ func pick_objects(player_name):
 			item = b.get_node("Pivot/Item")
 			picked = true
 	
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
 
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	Game.add_object()
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+	pass 

@@ -18,7 +18,15 @@ var objects = {'banana': preload("res://Scenes/Items/banana.tscn"),
 				'coffe bag': preload("res://Scenes/Items/coffee_bag.tscn"),
 				'detergent': preload("res://Scenes/Items/detergent.tscn"),
 				'meat': preload("res://Scenes/Items/meat.tscn"), 
-				'rubber duck': preload("res://Scenes/Items/rubber_duck.tscn")}
+				'rubber duck': preload("res://Scenes/Items/rubber_duck.tscn"),
+				'cabbagge':preload("res://Scenes/Items/cabbagge.tscn"),
+				'bowl': preload("res://Scenes/Items/bowl.tscn"),
+				'milk': preload("res://Scenes/Items/milk.tscn"),
+				'chips': preload("res://Scenes/Items/chips.tscn"),
+				'ducktopus': preload("res://Scenes/Items/ducktopus.tscn"),
+				'soda1':preload("res://Scenes/Items/soda1.tscn"),
+				'soda2':preload("res://Scenes/Items/soda2.tscn"),
+				'soda3':preload("res://Scenes/Items/soda3.tscn")}
 
 # setters y getters ===============================================
 func add_pinky_wins():

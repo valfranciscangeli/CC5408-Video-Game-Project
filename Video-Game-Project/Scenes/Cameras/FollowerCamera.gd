@@ -23,7 +23,6 @@ func _ready() -> void:
 
 func _physics_process(_delta: float) -> void:
 	for index in get_child_count():
-		#print("index: ", index)
 		var new_pos = get_child(index).global_position
 		if index == 0:
 			camera_rect.position = new_pos
