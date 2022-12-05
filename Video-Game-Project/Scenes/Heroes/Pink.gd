@@ -16,7 +16,7 @@ var SPEED = 200
 var JUMP_SPEED = 300
 var GRAVITY = 10
 
-var COYOTE_TIME = 0.1
+var COYOTE_TIME = 0.5
 var airborn_time = 0
 
 # limits ===========
