@@ -98,6 +98,7 @@ func _physics_process(delta):
 	#-------------------------------------------------------------------
 	# si pasan del limite del mapa se eliminan de la escena
 	if global_position.y >= inf_der.y:
+		MusicController.play_musicFall()
 		caida_sfx.play()
 		get_node(contador_canvas+"/"+my_face).modulate = color_of_death # "apagamos" su carita de los personajes en mapa
 		queue_free() # eliminamos al personaje del mapa
