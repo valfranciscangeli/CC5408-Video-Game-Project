@@ -673,22 +673,19 @@ tile_data = PoolIntArray( 131074, 11, 0, 131075, 11, 0, 131076, 3, 0, 196610, 14
 [node name="Contador" parent="." instance=ExtResource( 4 )]
 follow_viewport_enable = false
 
-[node name="ThrowableObjects" type="Node2D" parent="."]
-
 [node name="FollowerCamera" parent="." instance=ExtResource( 3 )]
 position = Vector2( 0, 3 )
 
 [node name="Pinky" parent="FollowerCamera" groups=["jugadores"] instance=ExtResource( 5 )]
 position = Vector2( 624, 334 )
-collision_mask = 5
 
 [node name="Wooly" parent="FollowerCamera" groups=["jugadores"] instance=ExtResource( 8 )]
 position = Vector2( 369, 366 )
-collision_mask = 5
+collision_mask = 153
 
 [node name="Bluey" parent="FollowerCamera" groups=["jugadores"] instance=ExtResource( 6 )]
 position = Vector2( 1007, 388 )
-collision_mask = 5
+collision_mask = 153
 
 [node name="Portal" parent="." groups=["portales"] instance=ExtResource( 7 )]
 position = Vector2( 240, 391 )
@@ -706,6 +703,8 @@ position = Vector2( 197, 115 )
 
 [node name="PositionIzqUp" type="Position2D" parent="Limites"]
 position = Vector2( -1146, -384 )
+
+[node name="ThrowableObjects" type="Node2D" parent="."]
 
 [node name="ObjectsPosition" type="Node2D" parent="."]
 
