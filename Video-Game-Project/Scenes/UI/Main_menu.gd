@@ -18,6 +18,7 @@ onready var animated_bluey = $AnimationsContainer/AnimatedBluey
 
 
 func _ready():
+	MusicController.play_music()
 	exit.connect("pressed",self,"_on_exit_pressed")
 	play.connect("pressed",self,"_on_play_pressed")
 	credits.connect("pressed",self,"_on_credits_pressed")

@@ -7,6 +7,7 @@ var next_level = 'level 02'
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
+	MusicController.stop_music()
 	if camara.get_child_count() == 1:
 		var hijo = camara.get_child(0).name
 		
