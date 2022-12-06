@@ -20,20 +20,12 @@ var credits = [
 			"author": "free-game-assets.itch.io"
 		}
 	 ]},
-#{"level": "Level 03", "credits": [
-#		{
-#			"name": "DOS-88 Synthwave Music Library",
-#			"author": "dos88.itch.io"
-#		},
-#		{
-#			"name": "Starry Space Parallaxing Background",
-#			"author": "enjl.itch.io"
-#		},
-#		{
-#			"name": "Crafting Materials",
-#			"author": "beast-pixels.itch.io"
-#		}
-#	 ]},
+{"level": "Level 03", "credits": [
+		{
+			"name": "Pixel Crystal Cave Tileset",
+			"author": "joel-sleppy.itch.io"
+		}
+	 ]},
 {"level": "Objects", "credits":[
 		{
 			"name": "Pixel Mart",
