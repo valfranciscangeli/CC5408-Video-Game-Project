@@ -8,7 +8,19 @@ onready var credits_container = $ScrollContainer/CreditsContainer
 var scroll_ended = false
 
 var credits = [
-	{ "level": " Level 01", "credits": [
+	{ "level": "Vaf Games", "credits": [
+		{
+			"name": "Francisco Almeida Diaz \n Valeria Franciscangeli \n Marcelo Valenzuela B.",
+			"author": "valfranciscangeli.itch.io/happy-fall-friends"
+		},
+	]},
+		{ "level": "Heroes", "credits": [
+		{
+			"name": "Free Tiny Hero Sprites Pixel Art",
+			"author": "free-game-assets.itch.io"
+		},
+	]},
+	{ "level": "Level 01", "credits": [
 		{
 			"name": "Free Green Zone Tileset Pixel Art",
 			"author": "free-game-assets.itch.io"
@@ -99,7 +111,7 @@ func _create_label_name(text) -> Label:
 	label.align = Label.ALIGN_CENTER
 	label.uppercase = true
 	label.autowrap = true
-	label.theme_type_variation = "Label2"
+	label.theme_type_variation = "SmallLabel"
 	return label
 	
 func _create_label_author(text) -> Label:
@@ -107,7 +119,7 @@ func _create_label_author(text) -> Label:
 	label.text = text
 	label.align = Label.ALIGN_CENTER
 	label.autowrap = true
-	label.theme_type_variation = "Label2"
+	label.theme_type_variation = "SmallLabelPink"
 	return label
 
 func _to_main_menu():
